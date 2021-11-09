@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936DE273A2355000F6556 /* AppDelegate.swift */; };
+		A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936E0273A2355000F6556 /* SceneDelegate.swift */; };
+		A41936E6273A2355000F6556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936E4273A2355000F6556 /* Main.storyboard */; };
+		A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A41936E7273A2355000F6556 /* Kitchen_Sink.xcdatamodeld */; };
+		A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936EC273A2359000F6556 /* LaunchScreen.storyboard */; };
+		A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936F5273A23AC000F6556 /* LoginViewController.swift */; };
+		A41936F8273A2622000F6556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41936F7273A2622000F6556 /* Assets.xcassets */; };
+		A41936FC273A280D000F6556 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A41936FB273A280D000F6556 /* icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A41936DB273A2355000F6556 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41936DE273A2355000F6556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A41936E0273A2355000F6556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A41936E5273A2355000F6556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A41936E8273A2355000F6556 /* Kitchen_Sink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kitchen_Sink.xcdatamodel; sourceTree = "<group>"; };
+		A41936ED273A2359000F6556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A41936EF273A2359000F6556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A41936F5273A23AC000F6556 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A41936F7273A2622000F6556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A41936FB273A280D000F6556 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Assets.xcassets/icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A41936D8273A2355000F6556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A41936D2273A2355000F6556 = {
+			isa = PBXGroup;
+			children = (
+				A41936DD273A2355000F6556 /* Kitchen Sink */,
+				A41936DC273A2355000F6556 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A41936DC273A2355000F6556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A41936DB273A2355000F6556 /* Kitchen Sink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A41936DD273A2355000F6556 /* Kitchen Sink */ = {
+			isa = PBXGroup;
+			children = (
+				A41936DE273A2355000F6556 /* AppDelegate.swift */,
+				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
+				A41936E4273A2355000F6556 /* Main.storyboard */,
+				A41936F5273A23AC000F6556 /* LoginViewController.swift */,
+				A41936F7273A2622000F6556 /* Assets.xcassets */,
+				A41936FB273A280D000F6556 /* icon.png */,
+				A41936EC273A2359000F6556 /* LaunchScreen.storyboard */,
+				A41936EF273A2359000F6556 /* Info.plist */,
+				A41936E7273A2355000F6556 /* Kitchen_Sink.xcdatamodeld */,
+			);
+			path = "Kitchen Sink";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A41936DA273A2355000F6556 /* Kitchen Sink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A41936F2273A2359000F6556 /* Build configuration list for PBXNativeTarget "Kitchen Sink" */;
+			buildPhases = (
+				A41936D7273A2355000F6556 /* Sources */,
+				A41936D8273A2355000F6556 /* Frameworks */,
+				A41936D9273A2355000F6556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kitchen Sink";
+			productName = "Kitchen Sink";
+			productReference = A41936DB273A2355000F6556 /* Kitchen Sink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A41936D3273A2355000F6556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					A41936DA273A2355000F6556 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = A41936D6273A2355000F6556 /* Build configuration list for PBXProject "Kitchen Sink" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A41936D2273A2355000F6556;
+			productRefGroup = A41936DC273A2355000F6556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A41936DA273A2355000F6556 /* Kitchen Sink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A41936D9273A2355000F6556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41936FC273A280D000F6556 /* icon.png in Resources */,
+				A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */,
+				A41936F8273A2622000F6556 /* Assets.xcassets in Resources */,
+				A41936E6273A2355000F6556 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A41936D7273A2355000F6556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */,
+				A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */,
+				A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */,
+				A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A41936E4273A2355000F6556 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41936E5273A2355000F6556 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A41936EC273A2359000F6556 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41936ED273A2359000F6556 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A41936F0273A2359000F6556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A41936F1273A2359000F6556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A41936F3273A2359000F6556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kitchen Sink/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "team21.Kitchen-Sink";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A41936F4273A2359000F6556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kitchen Sink/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "team21.Kitchen-Sink";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A41936D6273A2355000F6556 /* Build configuration list for PBXProject "Kitchen Sink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A41936F0273A2359000F6556 /* Debug */,
+				A41936F1273A2359000F6556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A41936F2273A2359000F6556 /* Build configuration list for PBXNativeTarget "Kitchen Sink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A41936F3273A2359000F6556 /* Debug */,
+				A41936F4273A2359000F6556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A41936E7273A2355000F6556 /* Kitchen_Sink.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A41936E8273A2355000F6556 /* Kitchen_Sink.xcdatamodel */,
+			);
+			currentVersion = A41936E8273A2355000F6556 /* Kitchen_Sink.xcdatamodel */;
+			path = Kitchen_Sink.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A41936D3273A2355000F6556 /* Project object */;
+}
