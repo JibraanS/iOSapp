@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		269F5D3B273DA2E900ACE691 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */; };
 		A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936DE273A2355000F6556 /* AppDelegate.swift */; };
 		A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936E0273A2355000F6556 /* SceneDelegate.swift */; };
 		A41936E6273A2355000F6556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936E4273A2355000F6556 /* Main.storyboard */; };
@@ -15,9 +16,13 @@
 		A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936F5273A23AC000F6556 /* LoginViewController.swift */; };
 		A41936F8273A2622000F6556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41936F7273A2622000F6556 /* Assets.xcassets */; };
 		A41936FC273A280D000F6556 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A41936FB273A280D000F6556 /* icon.png */; };
+		F5D3A6D349340959EA1EC27E /* Pods_Kitchen_Sink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6BEE669883E12E1552BE7CD3 /* Pods-Kitchen Sink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.debug.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.debug.xcconfig"; sourceTree = "<group>"; };
+		96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitchen_Sink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41936DB273A2355000F6556 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41936DE273A2355000F6556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41936E0273A2355000F6556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		A41936F5273A23AC000F6556 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A41936F7273A2622000F6556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41936FB273A280D000F6556 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Assets.xcassets/icon.png; sourceTree = "<group>"; };
+		D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.release.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D3A6D349340959EA1EC27E /* Pods_Kitchen_Sink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E52EE753555373AD254C01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3250AE8A675E46BF12CF5110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BEE669883E12E1552BE7CD3 /* Pods-Kitchen Sink.debug.xcconfig */,
+				D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A41936D2273A2355000F6556 = {
 			isa = PBXGroup;
 			children = (
 				A41936DD273A2355000F6556 /* Kitchen Sink */,
 				A41936DC273A2355000F6556 /* Products */,
+				3250AE8A675E46BF12CF5110 /* Pods */,
+				02E52EE753555373AD254C01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +87,7 @@
 		A41936DD273A2355000F6556 /* Kitchen Sink */ = {
 			isa = PBXGroup;
 			children = (
+				269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */,
 				A41936DE273A2355000F6556 /* AppDelegate.swift */,
 				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
 				A41936E4273A2355000F6556 /* Main.storyboard */,
@@ -80,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A41936F2273A2359000F6556 /* Build configuration list for PBXNativeTarget "Kitchen Sink" */;
 			buildPhases = (
+				D86A03272A8C055BA8A7729C /* [CP] Check Pods Manifest.lock */,
 				A41936D7273A2355000F6556 /* Sources */,
 				A41936D8273A2355000F6556 /* Frameworks */,
 				A41936D9273A2355000F6556 /* Resources */,
+				F1B1A6F9D8BC20E41C833B7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,10 +164,53 @@
 				A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */,
 				A41936F8273A2622000F6556 /* Assets.xcassets in Resources */,
 				A41936E6273A2355000F6556 /* Main.storyboard in Resources */,
+				269F5D3B273DA2E900ACE691 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D86A03272A8C055BA8A7729C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kitchen Sink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1B1A6F9D8BC20E41C833B7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A41936D7273A2355000F6556 /* Sources */ = {
@@ -291,6 +364,7 @@
 		};
 		A41936F3273A2359000F6556 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BEE669883E12E1552BE7CD3 /* Pods-Kitchen Sink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +383,7 @@
 		};
 		A41936F4273A2359000F6556 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

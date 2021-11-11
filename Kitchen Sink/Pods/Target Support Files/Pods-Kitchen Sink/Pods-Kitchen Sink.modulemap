@@ -1,0 +1,6 @@
+framework module Pods_Kitchen_Sink {
+  umbrella header "Pods-Kitchen Sink-umbrella.h"
+
+  export *
+  module * { export * }
+}
