@@ -51,6 +51,7 @@ class LoginViewController: UIViewController {
     }
     
     // hide/show confirm password elements depending on mode
+    
     @IBAction func modeChanged(_ sender: Any) {
         if(modeToggle.selectedSegmentIndex == 0) {
             confirmPasswordLabel.isHidden = true
