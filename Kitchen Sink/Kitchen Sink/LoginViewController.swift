@@ -122,15 +122,15 @@ class LoginViewController: UIViewController {
                   email.count > 0,
                   password.count > 0
             else {
-                self.statusLabel.text = "Fill all the text fields."
+                self.statusLabel.text = "Please complete all text fields"
                 return
             }
             Auth.auth().signIn(withEmail: email, password: password) { user, error in
                 if let error = error, user == nil  {
-                    self.statusLabel.text = "Sign in unsuccessful."
+                    self.statusLabel.text = "Sign in unsuccessful"
                 }
                 else {
-                    self.statusLabel.text = "Sign in successful."
+                    self.statusLabel.text = "Sign in successful"
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
             }
@@ -144,16 +144,17 @@ class LoginViewController: UIViewController {
                   password.count > 0,
                   confirmPassword == password
             else {
+                self.statusLabel.text = "Please complete all text fields"
                 return
             }
             Auth.auth().createUser(withEmail: email, password: password) { user, error in
                 if(error == nil) {
                     Auth.auth().signIn(withEmail: email, password: password)
-                    self.statusLabel.text = "Sign up successful."
+                    self.statusLabel.text = "Sign up successful"
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
                 else {
-                    self.statusLabel.text = "Sign up unsuccessful."
+                    self.statusLabel.text = error?.localizedDescription
                     return
                 }
             }
