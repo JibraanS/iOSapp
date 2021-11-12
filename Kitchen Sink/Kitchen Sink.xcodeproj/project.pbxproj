@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		269F5D3B273DA2E900ACE691 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */; };
+		A400CD7F273E06D0007768AB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CD7E273E06D0007768AB /* ProfileViewController.swift */; };
+		A400CD81273E0CAF007768AB /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD80273E0CAF007768AB /* profile.png */; };
+		A400CD83273E0F06007768AB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD82273E0F06007768AB /* settings.png */; };
+		A400CD85273E1041007768AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CD84273E1041007768AB /* SettingsViewController.swift */; };
+		A400CD87273E2305007768AB /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD86273E2305007768AB /* favorite.png */; };
+		A400CD89273E2311007768AB /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD88273E2311007768AB /* search.png */; };
+		A400CD8B273E2468007768AB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CD8A273E2468007768AB /* FavoritesViewController.swift */; };
 		A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936DE273A2355000F6556 /* AppDelegate.swift */; };
 		A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936E0273A2355000F6556 /* SceneDelegate.swift */; };
 		A41936E6273A2355000F6556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936E4273A2355000F6556 /* Main.storyboard */; };
@@ -23,6 +30,13 @@
 		269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6BEE669883E12E1552BE7CD3 /* Pods-Kitchen Sink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.debug.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.debug.xcconfig"; sourceTree = "<group>"; };
 		96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitchen_Sink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A400CD7E273E06D0007768AB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A400CD80273E0CAF007768AB /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		A400CD82273E0F06007768AB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		A400CD84273E1041007768AB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A400CD86273E2305007768AB /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		A400CD88273E2311007768AB /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		A400CD8A273E2468007768AB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A41936DB273A2355000F6556 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41936DE273A2355000F6556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41936E0273A2355000F6556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +76,6 @@
 				6BEE669883E12E1552BE7CD3 /* Pods-Kitchen Sink.debug.xcconfig */,
 				D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,7 +104,14 @@
 				A41936DE273A2355000F6556 /* AppDelegate.swift */,
 				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
 				A41936E4273A2355000F6556 /* Main.storyboard */,
+				A400CD8A273E2468007768AB /* FavoritesViewController.swift */,
+				A400CD88273E2311007768AB /* search.png */,
+				A400CD86273E2305007768AB /* favorite.png */,
+				A400CD84273E1041007768AB /* SettingsViewController.swift */,
+				A400CD82273E0F06007768AB /* settings.png */,
+				A400CD80273E0CAF007768AB /* profile.png */,
 				A41936F5273A23AC000F6556 /* LoginViewController.swift */,
+				A400CD7E273E06D0007768AB /* ProfileViewController.swift */,
 				A41936F7273A2622000F6556 /* Assets.xcassets */,
 				A41936FB273A280D000F6556 /* icon.png */,
 				A41936EC273A2359000F6556 /* LaunchScreen.storyboard */,
@@ -161,10 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41936FC273A280D000F6556 /* icon.png in Resources */,
+				A400CD89273E2311007768AB /* search.png in Resources */,
+				A400CD83273E0F06007768AB /* settings.png in Resources */,
+				A400CD81273E0CAF007768AB /* profile.png in Resources */,
 				A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */,
 				A41936F8273A2622000F6556 /* Assets.xcassets in Resources */,
 				A41936E6273A2355000F6556 /* Main.storyboard in Resources */,
 				269F5D3B273DA2E900ACE691 /* GoogleService-Info.plist in Resources */,
+				A400CD87273E2305007768AB /* favorite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +243,11 @@
 			files = (
 				A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */,
 				A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */,
+				A400CD8B273E2468007768AB /* FavoritesViewController.swift in Sources */,
+				A400CD7F273E06D0007768AB /* ProfileViewController.swift in Sources */,
 				A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */,
 				A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */,
+				A400CD85273E1041007768AB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

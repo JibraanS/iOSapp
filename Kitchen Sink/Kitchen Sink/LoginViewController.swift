@@ -21,6 +21,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     override func viewDidLoad() {
+        userIDLabel.font = UIFont(name: "Futura Bold", size: 16)
+        passwordLabel.font = UIFont(name: "Futura Bold", size: 16)
+        confirmPasswordLabel.font = UIFont(name: "Futura Bold", size: 16)
         // this isn't necessary, but it makes it look cleaner for repeated demonstration purposes because it logs out
         super.viewDidLoad()
         do {
