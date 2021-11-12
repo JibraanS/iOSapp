@@ -57,14 +57,60 @@ class LoginViewController: UIViewController {
     
     @IBAction func modeChanged(_ sender: Any) {
         if(modeToggle.selectedSegmentIndex == 0) {
-            confirmPasswordLabel.isHidden = true
-            confirmPasswordTextField.isHidden = true
-            signInButton.setTitle("Sign in", for: UIControl.State.normal)
+            //confirmPasswordLabel.isHidden = true
+            //confirmPasswordTextField.isHidden = true
+            //signInButton.setTitle("Sign in", for: UIControl.State.normal)
+            UIView.animate(
+                withDuration: 0.25,
+                delay: 0.0,
+                options: .curveEaseOut,
+                animations: {
+                    self.signInButton.alpha = 0.0
+                    self.confirmPasswordLabel.alpha = 0.0
+                    self.confirmPasswordTextField.alpha = 0.0
+                },
+                completion: {_ in
+                    self.signInButton.setImage(UIImage(named: "login.png"), for: .normal)
+                    UIView.animate(
+                        withDuration: 0.25,
+                        delay: 0.0,
+                        options: .curveEaseIn,
+                        animations: {
+                            self.signInButton.alpha = 1.0
+                            self.confirmPasswordLabel.isHidden = true
+                            self.confirmPasswordTextField.isHidden = true
+                        },
+                        completion: nil
+                    )
+                }
+            )
         }
         else if(modeToggle.selectedSegmentIndex == 1) {
-            confirmPasswordLabel.isHidden = false
-            confirmPasswordTextField.isHidden = false
-            signInButton.setTitle("Sign up", for: UIControl.State.normal)
+            //signInButton.setTitle("Sign up", for: UIControl.State.normal)
+            UIView.animate(
+                withDuration: 0.25,
+                delay: 0.0,
+                options: .curveEaseOut,
+                animations: {
+                    self.signInButton.alpha = 0.0
+                },
+                completion: {_ in
+                    self.signInButton.setImage(UIImage(named: "signup.png"), for: .normal)
+                    UIView.animate(
+                        withDuration: 0.25,
+                        delay: 0.0,
+                        options: .curveEaseIn,
+                        animations: {
+                            self.signInButton.alpha = 1.0
+                            self.confirmPasswordLabel.alpha = 1.0
+                            self.confirmPasswordTextField.alpha = 1.0
+                            self.confirmPasswordLabel.isHidden = false
+                            self.confirmPasswordTextField.isHidden = false
+                        },
+                        completion: nil
+                    )
+                }
+            )
         }
     }
     
