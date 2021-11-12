@@ -47,12 +47,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGD-TR-a3o">
-                                <rect key="frame" x="27" y="536" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kuy-2z-JAV">
                                 <rect key="frame" x="130.66666666666666" y="377" width="166.99999999999997" height="32"/>
                                 <constraints>
@@ -99,6 +93,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGD-TR-a3o">
+                                <rect key="frame" x="27" y="536" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Cw-u0-xZW"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -129,7 +129,9 @@
                             <constraint firstItem="3Lb-ey-QQp" firstAttribute="centerY" secondItem="Gcr-46-6R1" secondAttribute="centerY" constant="147" id="zyD-LA-5Tj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hQd-sT-X7H"/>
+                    <navigationItem key="navigationItem" id="hQd-sT-X7H">
+                        <barButtonItem key="backBarButtonItem" title="Logout" id="B0j-XZ-geV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="confirmPasswordLabel" destination="D5b-Lr-uSv" id="Hw1-RB-eLa"/>
                         <outlet property="confirmPasswordTextField" destination="3Lb-ey-QQp" id="dt8-y7-4ks"/>
@@ -147,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="1033.3333333333335" y="119.86607142857142"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="UtU-vJ-YbS">
             <objects>
                 <viewController id="KZM-rD-zne" customClass="SearchViewController" sceneMemberID="viewController">
@@ -155,14 +157,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="1xZ-8j-Sfu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Search" id="bQ0-zz-Mi7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZB-6B-WcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="-601"/>
+            <point key="canvasLocation" x="2757" y="-601"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="D60-vj-Clk">
             <objects>
                 <viewController id="h5o-Dv-MNA" customClass="ProfileViewController" customModule="Kitchen_Sink" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,13 +195,50 @@
                                     <action selector="uploadImage:" destination="h5o-Dv-MNA" eventType="touchUpInside" id="Coy-LJ-GfG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E5-Gs-jSZ">
+                                <rect key="frame" x="77" y="781" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4v2-jk-34A"/>
+                                    <constraint firstAttribute="height" constant="60" id="fo0-nA-Tc6"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="favorite.png"/>
+                                <connections>
+                                    <segue destination="bxc-73-0YE" kind="show" id="IQY-Fx-pcO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb3-Wc-aoT">
+                                <rect key="frame" x="293" y="781" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8ao-uQ-NTt"/>
+                                    <constraint firstAttribute="width" constant="60" id="wnt-0q-tLq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="search.png"/>
+                                <connections>
+                                    <segue destination="KZM-rD-zne" kind="show" identifier="searchSegue" id="ulu-CD-pxB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-pt-BbB">
+                                <rect key="frame" x="174" y="763" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="NcC-WA-ixy"/>
+                                    <constraint firstAttribute="width" constant="90" id="bbU-O9-b7w"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="profile.png"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NeE-ON-JfW"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="gcP-pt-BbB" secondAttribute="bottom" constant="39" id="0Vt-Ed-nGX"/>
+                            <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="Cb3-Wc-aoT" secondAttribute="bottom" constant="51" id="2Lk-Ex-l3F"/>
+                            <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="gcP-pt-BbB" secondAttribute="trailing" constant="164" id="A4h-gA-vHx"/>
+                            <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="Cb3-Wc-aoT" secondAttribute="trailing" constant="75" id="CsR-Px-XrC"/>
+                            <constraint firstItem="gcP-pt-BbB" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="174" id="GtI-XD-HcF"/>
                             <constraint firstItem="7ht-Dl-FV8" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="114" id="NEN-nm-eaL"/>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="J0L-6d-tTq" secondAttribute="bottom" constant="451" id="YPN-JG-yWY"/>
+                            <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="6E5-Gs-jSZ" secondAttribute="bottom" constant="51" id="bzv-0r-cwk"/>
+                            <constraint firstItem="6E5-Gs-jSZ" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="77" id="odN-v4-wgC"/>
                             <constraint firstItem="J0L-6d-tTq" firstAttribute="top" secondItem="NeE-ON-JfW" secondAttribute="top" constant="283" id="us1-xr-cL3"/>
                             <constraint firstItem="7ht-Dl-FV8" firstAttribute="top" secondItem="NeE-ON-JfW" secondAttribute="top" constant="75" id="wor-bg-2Jv"/>
                             <constraint firstItem="J0L-6d-tTq" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="288" id="x4v-8m-BVr"/>
@@ -206,7 +246,9 @@
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="J0L-6d-tTq" secondAttribute="trailing" constant="70" id="ygM-eK-kYh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8M7-Cp-JH9"/>
+                    <navigationItem key="navigationItem" title="Profile" id="8M7-Cp-JH9">
+                        <barButtonItem key="backBarButtonItem" title="Profile" id="Vir-3Y-YeX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileButton" destination="7ht-Dl-FV8" id="COz-h0-Rw8"/>
                     </connections>
@@ -215,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="1990.6542056074766" y="119.87041036717063"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="JsY-JJ-lXc">
             <objects>
                 <viewController id="Ghw-th-f4O" customClass="SettingsViewController" customModule="Kitchen_Sink" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,13 +265,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9eN-3E-oyF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="C79-z3-d8E"/>
+                    <navigationItem key="navigationItem" title="Settings" id="C79-z3-d8E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlE-GD-GTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2898" y="120"/>
+            <point key="canvasLocation" x="2756" y="120"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="9d9-pC-Xps">
+            <objects>
+                <viewController id="bxc-73-0YE" customClass="FavoritesViewController" customModule="Kitchen_Sink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mDK-Wd-gtK">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aaC-4l-Ktq"/>
+                        <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="c8u-RI-TGX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sos-di-hkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2756" y="844"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="fbX-ys-wy8">
@@ -239,19 +297,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Miz-JA-6qI">
-                                <rect key="frame" x="87" y="354" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Miz-JA-6qI">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oru-FC-Zls"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Miz-JA-6qI" firstAttribute="leading" secondItem="oru-FC-Zls" secondAttribute="leading" id="6gH-b6-piP"/>
+                            <constraint firstItem="oru-FC-Zls" firstAttribute="trailing" secondItem="Miz-JA-6qI" secondAttribute="trailing" id="KA9-Fx-Hp0"/>
+                            <constraint firstItem="Miz-JA-6qI" firstAttribute="top" secondItem="oru-FC-Zls" secondAttribute="top" id="pIK-xa-pK7"/>
+                            <constraint firstItem="oru-FC-Zls" firstAttribute="bottom" secondItem="Miz-JA-6qI" secondAttribute="bottom" id="ves-bE-mic"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7z-s6-yyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2899" y="-601"/>
+            <point key="canvasLocation" x="3517" y="-601"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="tcK-cZ-CqY">
@@ -261,12 +324,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="M9o-w4-LzI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ytb-dm-CMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809" y="-601"/>
+            <point key="canvasLocation" x="4291" y="-601"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4ua-qy-LHE">
@@ -288,8 +351,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favorite.png" width="38.880001068115234" height="38.880001068115234"/>
         <image name="icon.png" width="28.799999237060547" height="28.799999237060547"/>
         <image name="profile.png" width="79.199996948242188" height="79.199996948242188"/>
+        <image name="search.png" width="39.599998474121094" height="38.880001068115234"/>
         <image name="settings.png" width="38.880001068115234" height="38.880001068115234"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
