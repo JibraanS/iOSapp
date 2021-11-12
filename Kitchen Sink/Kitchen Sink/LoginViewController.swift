@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
                   email.count > 0,
                   password.count > 0
             else {
-                self.statusLabel.text = "Fill all the text fields."
+                self.statusLabel.text = "Please complete all text fields."
                 return
             }
             Auth.auth().signIn(withEmail: email, password: password) { user, error in
