@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         let image = UIImagePickerController()
         image.delegate = self
         
+        // TODO Make a popover to choose whether to use camera or photo library
         image.sourceType = UIImagePickerController.SourceType.photoLibrary
         
         image.allowsEditing = false
@@ -31,10 +32,12 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage{
+            print("Image uploaded")
             self.profileButton.setImage(image, for: .normal)
         }
         else {
             //Error message
+            print("Image upload error")
         }
         self.dismiss(animated: true, completion: nil)
     }

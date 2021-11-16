@@ -49,6 +49,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow Kitchen Sink to access Photo Library?</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
