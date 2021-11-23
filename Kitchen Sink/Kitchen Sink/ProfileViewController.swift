@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     @IBOutlet weak var profileButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
+        // get current user
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        
         // set background based on darkmode
-        if (UserDefaults.standard.bool(forKey: "darkmode")) {
+        if (UserDefaults.standard.bool(forKey: email + "darkmode")) {
             view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
         else {

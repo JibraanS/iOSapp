@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var kosherLabel: UILabel!
     
     @IBAction func darkmode(_ sender: UISwitch) {
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
         if (sender.isOn == true){
             view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             darkmodeLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
@@ -42,29 +45,41 @@ class SettingsViewController: UIViewController {
             halalLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             kosherLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
-        UserDefaults.standard.set(sender.isOn, forKey: "darkmode")
+        UserDefaults.standard.set(sender.isOn, forKey: email + "darkmode")
         UserDefaults.standard.synchronize()
     }
     @IBAction func gluten(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "gluten")
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        UserDefaults.standard.set(sender.isOn, forKey: email + "gluten")
         UserDefaults.standard.synchronize()
     }
     @IBAction func vegetarian(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "vegetarian")
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        UserDefaults.standard.set(sender.isOn, forKey: email + "vegetarian")
         UserDefaults.standard.synchronize()
     }
     @IBAction func halal(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "halal")
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        UserDefaults.standard.set(sender.isOn, forKey: email + "halal")
         UserDefaults.standard.synchronize()
     }
     @IBAction func kosher(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "kosher")
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        UserDefaults.standard.set(sender.isOn, forKey: email + "kosher")
         UserDefaults.standard.synchronize()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // get current user
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        
         // set background based on darkmode
-        if (UserDefaults.standard.bool(forKey: "darkmode")) {
+        if (UserDefaults.standard.bool(forKey: email + "darkmode")) {
             view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             darkmodeLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             dietaryLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
@@ -82,17 +97,17 @@ class SettingsViewController: UIViewController {
             halalLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             kosherLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
+        
+        darkmodeSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "darkmode")
+        glutenSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "gluten")
+        vegetarianSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "vegetarian")
+        halalSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "halal")
+        kosherSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "kosher")
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        darkmodeSwitch?.isOn = UserDefaults.standard.bool(forKey: "darkmode")
-        glutenSwitch?.isOn = UserDefaults.standard.bool(forKey: "gluten")
-        vegetarianSwitch?.isOn = UserDefaults.standard.bool(forKey: "vegetarian")
-        halalSwitch?.isOn = UserDefaults.standard.bool(forKey: "halal")
-        kosherSwitch?.isOn = UserDefaults.standard.bool(forKey: "kosher")
-        
     }
 
 }
