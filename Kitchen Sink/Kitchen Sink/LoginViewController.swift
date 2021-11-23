@@ -27,6 +27,13 @@ class LoginViewController: UIViewController {
         // this isn't necessary, but it makes it look cleaner for repeated demonstration purposes because it logs out
         super.viewDidLoad()
         
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(recognizeRightSwipeGesture(recognizer:)))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(swipeRight)
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(recognizeLeftSwipeGesture(recognizer:)))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
+        
         do {
             try Auth.auth().signOut()
         } catch {
@@ -165,5 +172,61 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    @IBAction func recognizeRightSwipeGesture(recognizer: UISwipeGestureRecognizer)
+    {
+        modeToggle.selectedSegmentIndex = 0
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0.0,
+            options: .curveEaseOut,
+            animations: {
+                self.signInButton.alpha = 0.0
+                self.confirmPasswordLabel.alpha = 0.0
+                self.confirmPasswordTextField.alpha = 0.0
+            },
+            completion: {_ in
+                self.signInButton.setImage(UIImage(named: "login.png"), for: .normal)
+                UIView.animate(
+                    withDuration: 0.25,
+                    delay: 0.0,
+                    options: .curveEaseIn,
+                    animations: {
+                        self.signInButton.alpha = 1.0
+                        self.confirmPasswordLabel.isHidden = true
+                        self.confirmPasswordTextField.isHidden = true
+                    },
+                    completion: nil
+                )
+            }
+        )
+    }
+    @IBAction func recognizeLeftSwipeGesture(recognizer: UISwipeGestureRecognizer)
+    {
+        modeToggle.selectedSegmentIndex = 1
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0.0,
+            options: .curveEaseOut,
+            animations: {
+                self.signInButton.alpha = 0.0
+            },
+            completion: {_ in
+                self.signInButton.setImage(UIImage(named: "signup.png"), for: .normal)
+                UIView.animate(
+                    withDuration: 0.25,
+                    delay: 0.0,
+                    options: .curveEaseIn,
+                    animations: {
+                        self.signInButton.alpha = 1.0
+                        self.confirmPasswordLabel.alpha = 1.0
+                        self.confirmPasswordTextField.alpha = 1.0
+                        self.confirmPasswordLabel.isHidden = false
+                        self.confirmPasswordTextField.isHidden = false
+                    },
+                    completion: nil
+                )
+            }
+        )
     }
 }
