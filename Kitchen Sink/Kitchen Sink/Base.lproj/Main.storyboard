@@ -35,14 +35,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGR-IY-eiO">
-                                <rect key="frame" x="27" y="477" width="57" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="28.333333333333332" y="477" width="54.666666666666671" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGD-TR-a3o">
-                                <rect key="frame" x="27" y="536" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="536" width="68" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -91,8 +91,8 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-Lr-uSv">
-                                <rect key="frame" x="27" y="600" width="139" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="31.666666666666671" y="600" width="130" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -223,17 +223,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-6d-tTq">
-                                <rect key="frame" x="288" y="283" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Htd-n3-c8k"/>
-                                    <constraint firstAttribute="height" constant="70" id="amb-DT-VVj"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="settings.png"/>
-                                <connections>
-                                    <segue destination="Ghw-th-f4O" kind="push" id="kRf-0Y-XEC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-Dl-FV8">
                                 <rect key="frame" x="114" y="75" width="200" height="200"/>
                                 <constraints>
@@ -275,6 +264,17 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="profile.png"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-6d-tTq">
+                                <rect key="frame" x="287" y="371" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Htd-n3-c8k"/>
+                                    <constraint firstAttribute="height" constant="70" id="amb-DT-VVj"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="settings.png"/>
+                                <connections>
+                                    <segue destination="Ghw-th-f4O" kind="push" id="kRf-0Y-XEC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NeE-ON-JfW"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -314,14 +314,129 @@
                     <view key="view" contentMode="scaleToFill" id="Krc-XU-HUq">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darkmode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-wN-7OJ">
+                                <rect key="frame" x="109" y="118" width="96" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uvf-H5-zqu">
+                                <rect key="frame" x="272" y="116" width="51" height="31"/>
+                                <connections>
+                                    <action selector="darkmode:" destination="Ghw-th-f4O" eventType="valueChanged" id="qUP-wE-Jgr"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gluten-free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8y-RW-Vak">
+                                <rect key="frame" x="117" y="289" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bQ-VH-XtT">
+                                <rect key="frame" x="120" y="343" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXH-6q-x9Z">
+                                <rect key="frame" x="140" y="396" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kosher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6m-r2-l8u">
+                                <rect key="frame" x="134" y="447" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rz5-eZ-KI3">
+                                <rect key="frame" x="273" y="284" width="51" height="31"/>
+                                <connections>
+                                    <action selector="gluten:" destination="Ghw-th-f4O" eventType="valueChanged" id="aU9-lA-1cB"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ps7-AF-941">
+                                <rect key="frame" x="272" y="338" width="51" height="31"/>
+                                <connections>
+                                    <action selector="vegetarian:" destination="Ghw-th-f4O" eventType="valueChanged" id="EVx-e8-bGn"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ady-LE-3F7">
+                                <rect key="frame" x="272" y="391" width="51" height="31"/>
+                                <connections>
+                                    <action selector="halal:" destination="Ghw-th-f4O" eventType="valueChanged" id="h5B-16-R7k"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m6L-bU-tko">
+                                <rect key="frame" x="274" y="442" width="51" height="31"/>
+                                <connections>
+                                    <action selector="kosher:" destination="Ghw-th-f4O" eventType="valueChanged" id="vqn-wY-bNo"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dietary Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-T8-gKC">
+                                <rect key="frame" x="100" y="308" width="229" height="32"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9eN-3E-oyF"/>
                         <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Rz5-eZ-KI3" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="273" id="0jM-HW-1by"/>
+                            <constraint firstItem="F8y-RW-Vak" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="117" id="2T6-rW-3Ty"/>
+                            <constraint firstItem="1Px-wN-7OJ" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="118" id="3ws-gI-ktt"/>
+                            <constraint firstItem="Ps7-AF-941" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="338" id="433-HI-uqG"/>
+                            <constraint firstItem="Ady-LE-3F7" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="272" id="4yy-OD-tsv"/>
+                            <constraint firstItem="L6m-r2-l8u" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="134" id="D17-PM-hUD"/>
+                            <constraint firstItem="L6m-r2-l8u" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="447" id="DA8-12-pEv"/>
+                            <constraint firstItem="1Px-wN-7OJ" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="109" id="DR3-Un-Bvu"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="m6L-bU-tko" secondAttribute="trailing" constant="105" id="EQr-W8-m9b"/>
+                            <constraint firstItem="bXH-6q-x9Z" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="140" id="Gl0-eU-bL3"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="Ps7-AF-941" secondAttribute="trailing" constant="107" id="Haz-4C-e7V"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="F8y-RW-Vak" secondAttribute="trailing" constant="223" id="JzI-kY-b7o"/>
+                            <constraint firstItem="uvf-H5-zqu" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="272" id="KiZ-zN-un3"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="1Px-wN-7OJ" secondAttribute="trailing" constant="223" id="MSP-TW-jWb"/>
+                            <constraint firstItem="F8y-RW-Vak" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="289" id="OcH-uM-uk6"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="L6m-r2-l8u" secondAttribute="trailing" constant="240" id="Q55-D9-Tcc"/>
+                            <constraint firstItem="Ady-LE-3F7" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="391" id="QZN-Xd-FCX"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="Ady-LE-3F7" secondAttribute="trailing" constant="107" id="Qxl-7G-22c"/>
+                            <constraint firstItem="6gG-T8-gKC" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="100" id="RxW-wA-cyu"/>
+                            <constraint firstItem="1bQ-VH-XtT" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="343" id="S14-zw-XON"/>
+                            <constraint firstItem="bXH-6q-x9Z" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="396" id="TId-Cw-1QR"/>
+                            <constraint firstItem="uvf-H5-zqu" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="116" id="Uer-of-tnQ"/>
+                            <constraint firstItem="Ps7-AF-941" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="272" id="cFR-RA-2gw"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="bXH-6q-x9Z" secondAttribute="trailing" constant="250" id="cc5-1q-Fah"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="6gG-T8-gKC" secondAttribute="trailing" constant="99" id="diB-9g-W98"/>
+                            <constraint firstItem="1bQ-VH-XtT" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="120" id="fwO-dx-fks"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="1bQ-VH-XtT" secondAttribute="trailing" constant="226" id="gQg-xQ-v7C"/>
+                            <constraint firstItem="6gG-T8-gKC" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="221" id="h9Q-vR-eU3"/>
+                            <constraint firstItem="Rz5-eZ-KI3" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="284" id="i8J-ig-mjh"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="Rz5-eZ-KI3" secondAttribute="trailing" constant="106" id="pwN-53-YQy"/>
+                            <constraint firstItem="m6L-bU-tko" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="442" id="u97-jZ-AcX"/>
+                            <constraint firstItem="m6L-bU-tko" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="274" id="wcJ-z4-Qbs"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="uvf-H5-zqu" secondAttribute="trailing" constant="107" id="yDn-sl-Fyp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="C79-z3-d8E"/>
+                    <connections>
+                        <outlet property="darkmodeLabel" destination="1Px-wN-7OJ" id="nBf-U6-wPE"/>
+                        <outlet property="darkmodeSwitch" destination="uvf-H5-zqu" id="Y10-ln-9Oq"/>
+                        <outlet property="dietaryLabel" destination="6gG-T8-gKC" id="6li-mt-KvG"/>
+                        <outlet property="glutenLabel" destination="F8y-RW-Vak" id="cLC-u2-7o4"/>
+                        <outlet property="glutenSwitch" destination="Rz5-eZ-KI3" id="HNO-M7-Mp8"/>
+                        <outlet property="halalLabel" destination="bXH-6q-x9Z" id="ugq-18-uQq"/>
+                        <outlet property="halalSwitch" destination="Ady-LE-3F7" id="iBV-xP-ASj"/>
+                        <outlet property="kosherLabel" destination="L6m-r2-l8u" id="XbG-VQ-jxJ"/>
+                        <outlet property="kosherSwitch" destination="m6L-bU-tko" id="vOV-QX-NVp"/>
+                        <outlet property="vegetarianLabel" destination="1bQ-VH-XtT" id="8B5-jt-GjQ"/>
+                        <outlet property="vegetarianSwitch" destination="Ps7-AF-941" id="p0K-KG-qoW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlE-GD-GTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756" y="120"/>
+            <point key="canvasLocation" x="2754.6728971962616" y="119.87041036717063"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="9d9-pC-Xps">
@@ -498,7 +613,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="3Cw-bt-RES"/>
         <segue reference="74A-bu-oay"/>
-        <segue reference="qel-Et-KnV"/>
+        <segue reference="ulu-CD-pxB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="favorite.png" width="38.880001068115234" height="38.880001068115234"/>

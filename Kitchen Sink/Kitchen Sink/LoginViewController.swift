@@ -21,11 +21,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     override func viewDidLoad() {
-        userIDLabel.font = UIFont(name: "Futura Bold", size: 16)
-        passwordLabel.font = UIFont(name: "Futura Bold", size: 16)
-        confirmPasswordLabel.font = UIFont(name: "Futura Bold", size: 16)
+        
         // this isn't necessary, but it makes it look cleaner for repeated demonstration purposes because it logs out
         super.viewDidLoad()
+        
         do {
             try Auth.auth().signOut()
         } catch {
@@ -51,6 +50,21 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // set background based on darkmode
+        if (UserDefaults.standard.bool(forKey: "darkmode")) {
+            view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            userIDLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            passwordLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            confirmPasswordLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            statusLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+        }
+        else {
+            view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            userIDLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            passwordLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            confirmPasswordLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            statusLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+        }
     }
     
     // hide/show confirm password elements depending on mode
