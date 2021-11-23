@@ -374,8 +374,19 @@
                                     <action selector="kosher:" destination="Ghw-th-f4O" eventType="valueChanged" id="vqn-wY-bNo"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4h-6G-EGA">
+                                <rect key="frame" x="126" y="696" width="176" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9hD-Ie-qAW"/>
+                                    <constraint firstAttribute="width" constant="176" id="pP9-5x-ERi"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="delete.png"/>
+                                <connections>
+                                    <action selector="deleteAccount:" destination="Ghw-th-f4O" eventType="touchUpInside" id="uKj-Kv-bxk"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dietary Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-T8-gKC">
-                                <rect key="frame" x="100" y="308" width="229" height="32"/>
+                                <rect key="frame" x="100" y="219" width="229" height="32"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -385,6 +396,7 @@
                         <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Rz5-eZ-KI3" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="273" id="0jM-HW-1by"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="r4h-6G-EGA" secondAttribute="trailing" constant="126" id="0tE-KD-Zpb"/>
                             <constraint firstItem="F8y-RW-Vak" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="117" id="2T6-rW-3Ty"/>
                             <constraint firstItem="1Px-wN-7OJ" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="118" id="3ws-gI-ktt"/>
                             <constraint firstItem="Ps7-AF-941" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="338" id="433-HI-uqG"/>
@@ -406,6 +418,7 @@
                             <constraint firstItem="1bQ-VH-XtT" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="343" id="S14-zw-XON"/>
                             <constraint firstItem="bXH-6q-x9Z" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="396" id="TId-Cw-1QR"/>
                             <constraint firstItem="uvf-H5-zqu" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="116" id="Uer-of-tnQ"/>
+                            <constraint firstItem="r4h-6G-EGA" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="126" id="X3N-w6-N5C"/>
                             <constraint firstItem="Ps7-AF-941" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="272" id="cFR-RA-2gw"/>
                             <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="bXH-6q-x9Z" secondAttribute="trailing" constant="250" id="cc5-1q-Fah"/>
                             <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="6gG-T8-gKC" secondAttribute="trailing" constant="99" id="diB-9g-W98"/>
@@ -414,6 +427,7 @@
                             <constraint firstItem="6gG-T8-gKC" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="221" id="h9Q-vR-eU3"/>
                             <constraint firstItem="Rz5-eZ-KI3" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="284" id="i8J-ig-mjh"/>
                             <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="Rz5-eZ-KI3" secondAttribute="trailing" constant="106" id="pwN-53-YQy"/>
+                            <constraint firstItem="9eN-3E-oyF" firstAttribute="bottom" secondItem="r4h-6G-EGA" secondAttribute="bottom" constant="92" id="u3M-Bi-5td"/>
                             <constraint firstItem="m6L-bU-tko" firstAttribute="top" secondItem="9eN-3E-oyF" secondAttribute="top" constant="442" id="u97-jZ-AcX"/>
                             <constraint firstItem="m6L-bU-tko" firstAttribute="leading" secondItem="9eN-3E-oyF" secondAttribute="leading" constant="274" id="wcJ-z4-Qbs"/>
                             <constraint firstItem="9eN-3E-oyF" firstAttribute="trailing" secondItem="uvf-H5-zqu" secondAttribute="trailing" constant="107" id="yDn-sl-Fyp"/>
@@ -423,6 +437,7 @@
                     <connections>
                         <outlet property="darkmodeLabel" destination="1Px-wN-7OJ" id="nBf-U6-wPE"/>
                         <outlet property="darkmodeSwitch" destination="uvf-H5-zqu" id="Y10-ln-9Oq"/>
+                        <outlet property="deleteButton" destination="r4h-6G-EGA" id="pZS-t1-d2C"/>
                         <outlet property="dietaryLabel" destination="6gG-T8-gKC" id="6li-mt-KvG"/>
                         <outlet property="glutenLabel" destination="F8y-RW-Vak" id="cLC-u2-7o4"/>
                         <outlet property="glutenSwitch" destination="Rz5-eZ-KI3" id="HNO-M7-Mp8"/>
@@ -432,11 +447,12 @@
                         <outlet property="kosherSwitch" destination="m6L-bU-tko" id="vOV-QX-NVp"/>
                         <outlet property="vegetarianLabel" destination="1bQ-VH-XtT" id="8B5-jt-GjQ"/>
                         <outlet property="vegetarianSwitch" destination="Ps7-AF-941" id="p0K-KG-qoW"/>
+                        <segue destination="X1C-Wg-XyM" kind="presentation" identifier="delete" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="nm7-jD-zlo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlE-GD-GTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754.6728971962616" y="119.87041036717063"/>
+            <point key="canvasLocation" x="2756" y="120"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="9d9-pC-Xps">
@@ -612,10 +628,12 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="3Cw-bt-RES"/>
-        <segue reference="74A-bu-oay"/>
-        <segue reference="ulu-CD-pxB"/>
+        <segue reference="4KC-6t-7Xh"/>
+        <segue reference="qel-Et-KnV"/>
+        <segue reference="nm7-jD-zlo"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="delete.png" width="159.36000061035156" height="42.479999542236328"/>
         <image name="favorite.png" width="38.880001068115234" height="38.880001068115234"/>
         <image name="login.png" width="115.91999816894531" height="42.479999542236328"/>
         <image name="profile.png" width="79.199996948242188" height="79.199996948242188"/>

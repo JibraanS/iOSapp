@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        definesPresentationContext = true
+        
         // this isn't necessary, but it makes it look cleaner for repeated demonstration purposes because it logs out
         super.viewDidLoad()
         
@@ -134,7 +136,7 @@ class LoginViewController: UIViewController {
                     self.statusLabel.text = "Sign in unsuccessful"
                 }
                 else {
-                    self.statusLabel.text = "Sign in successful"
+                    self.statusLabel.text = ""
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
             }

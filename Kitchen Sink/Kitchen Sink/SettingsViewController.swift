@@ -16,6 +16,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var halalSwitch: UISwitch!
     @IBOutlet weak var kosherSwitch: UISwitch!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     // Labels to change color
     @IBOutlet weak var darkmodeLabel: UILabel!
     @IBOutlet weak var dietaryLabel: UILabel!
@@ -110,4 +112,40 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func deleteAccount(_ sender: Any) {
+        var confirmDelete = false
+        let controller = UIAlertController(
+            title: "Delete Account",
+            message: "Are you sure you want to delete your account?",
+            preferredStyle: .alert)
+        controller.addAction(UIAlertAction(
+                                title: "Cancel",
+                                style: .cancel,
+                                handler: nil))
+        controller.addAction(UIAlertAction(
+                                title: "Delete",
+                                style: .destructive,
+                                handler: { _ in
+                                    let user = Auth.auth().currentUser
+                                    let email:String = user?.email ?? "none"
+                                    let defaults = UserDefaults.standard
+                                    defaults.removeObject(forKey: email + "darkmode")
+                                    defaults.removeObject(forKey: email + "gluten")
+                                    defaults.removeObject(forKey: email + "vegetarian")
+                                    defaults.removeObject(forKey: email + "halal")
+                                    defaults.removeObject(forKey: email + "kosher")
+                                    user?.delete { error in
+                                        if let error = error {
+                                            print(error)
+                                        }
+                                        else {
+                                            confirmDelete = true
+                                            self.performSegue(withIdentifier: "delete", sender: nil)
+                                        }
+                                    }
+                                }))
+        present(controller, animated: true, completion: nil)
+        print(confirmDelete)
+    }
+    
 }

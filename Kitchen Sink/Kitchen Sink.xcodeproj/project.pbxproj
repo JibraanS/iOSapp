@@ -18,6 +18,7 @@
 		A400CD8D273E2EE0007768AB /* utensils.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD8C273E2EE0007768AB /* utensils.png */; };
 		A400CD8F273F0F73007768AB /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD8E273F0F73007768AB /* login.png */; };
 		A400CD91273F0F7D007768AB /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD90273F0F7D007768AB /* signup.png */; };
+		A400CDFD274D8ED4007768AB /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CDFC274D8ED4007768AB /* delete.png */; };
 		A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936DE273A2355000F6556 /* AppDelegate.swift */; };
 		A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936E0273A2355000F6556 /* SceneDelegate.swift */; };
 		A41936E6273A2355000F6556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936E4273A2355000F6556 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		A400CD8C273E2EE0007768AB /* utensils.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utensils.png; sourceTree = "<group>"; };
 		A400CD8E273F0F73007768AB /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		A400CD90273F0F7D007768AB /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
+		A400CDFC274D8ED4007768AB /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		A41936DB273A2355000F6556 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41936DE273A2355000F6556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41936E0273A2355000F6556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				A41936DE273A2355000F6556 /* AppDelegate.swift */,
 				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
 				A41936E4273A2355000F6556 /* Main.storyboard */,
+				A400CDFC274D8ED4007768AB /* delete.png */,
 				A400CD90273F0F7D007768AB /* signup.png */,
 				A400CD8E273F0F73007768AB /* login.png */,
 				A400CD8C273E2EE0007768AB /* utensils.png */,
@@ -195,6 +198,7 @@
 				A400CD81273E0CAF007768AB /* profile.png in Resources */,
 				A400CD8D273E2EE0007768AB /* utensils.png in Resources */,
 				A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */,
+				A400CDFD274D8ED4007768AB /* delete.png in Resources */,
 				A400CD8F273F0F73007768AB /* login.png in Resources */,
 				A41936F8273A2622000F6556 /* Assets.xcassets in Resources */,
 				A41936E6273A2355000F6556 /* Main.storyboard in Resources */,
