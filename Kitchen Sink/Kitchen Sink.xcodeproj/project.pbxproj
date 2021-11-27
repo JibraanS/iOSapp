@@ -18,7 +18,6 @@
 		A400CD8F273F0F73007768AB /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD8E273F0F73007768AB /* login.png */; };
 		A400CD91273F0F7D007768AB /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD90273F0F7D007768AB /* signup.png */; };
 		A400CDFD274D8ED4007768AB /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CDFC274D8ED4007768AB /* delete.png */; };
-		A400CDFF274EE6BD007768AB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CDFE274EE6BD007768AB /* SearchViewController.swift */; };
 		A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936DE273A2355000F6556 /* AppDelegate.swift */; };
 		A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936E0273A2355000F6556 /* SceneDelegate.swift */; };
 		A41936E6273A2355000F6556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936E4273A2355000F6556 /* Main.storyboard */; };
@@ -30,6 +29,7 @@
 		A435B5082752DDC900612A92 /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5042752DDC800612A92 /* dinner.png */; };
 		A435B5092752DDC900612A92 /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5052752DDC800612A92 /* breakfast.png */; };
 		A435B50A2752DDC900612A92 /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5062752DDC900612A92 /* lunch.png */; };
+		A435B50C2752E1D500612A92 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B50B2752E1D500612A92 /* SearchViewController.swift */; };
 		F5D3A6D349340959EA1EC27E /* Pods_Kitchen_Sink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,6 @@
 		A400CD8E273F0F73007768AB /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		A400CD90273F0F7D007768AB /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		A400CDFC274D8ED4007768AB /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
-		A400CDFE274EE6BD007768AB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A41936DB273A2355000F6556 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41936DE273A2355000F6556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41936E0273A2355000F6556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		A435B5042752DDC800612A92 /* dinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dinner.png; sourceTree = "<group>"; };
 		A435B5052752DDC800612A92 /* breakfast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakfast.png; sourceTree = "<group>"; };
 		A435B5062752DDC900612A92 /* lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunch.png; sourceTree = "<group>"; };
+		A435B50B2752E1D500612A92 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.release.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +114,7 @@
 		A41936DD273A2355000F6556 /* Kitchen Sink */ = {
 			isa = PBXGroup;
 			children = (
+				A435B50B2752E1D500612A92 /* SearchViewController.swift */,
 				269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */,
 				A41936DE273A2355000F6556 /* AppDelegate.swift */,
 				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
@@ -122,7 +123,6 @@
 				A435B5042752DDC800612A92 /* dinner.png */,
 				A435B5062752DDC900612A92 /* lunch.png */,
 				A435B5032752DDC800612A92 /* searchbutton.png */,
-				A400CDFE274EE6BD007768AB /* SearchViewController.swift */,
 				A400CDFC274D8ED4007768AB /* delete.png */,
 				A400CD90273F0F7D007768AB /* signup.png */,
 				A400CD8E273F0F73007768AB /* login.png */,
@@ -271,7 +271,7 @@
 			files = (
 				A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */,
 				A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */,
-				A400CDFF274EE6BD007768AB /* SearchViewController.swift in Sources */,
+				A435B50C2752E1D500612A92 /* SearchViewController.swift in Sources */,
 				A400CD7F273E06D0007768AB /* ProfileViewController.swift in Sources */,
 				A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */,
 				A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */,

@@ -2,25 +2,23 @@
 //  SearchViewController.swift
 //  Kitchen Sink
 //
-//  Created by Samuel Perales on 11/24/21.
+//  Created by Samuel Perales on 11/27/21.
 //
 
 import UIKit
 import Firebase
 
-class Recipe {
-    var name = ""
-    var description = ""
-    var type = "breakfast" //breakfast, lunch, dinner
-    var ingredients = [""]
-    var directions = [""]
-}
+//class Recipe {
+//    var name = ""
+//    var description = ""
+//    var type = "breakfast" //breakfast, lunch, dinner
+//    var ingredients = [""]
+//    var directions = [""]
+//}
 
 class SearchViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
-        print("HERE")
-        
         // get current user
         let user = Auth.auth().currentUser
         let email:String = user?.email ?? "none"
@@ -36,7 +34,6 @@ class SearchViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        print("HERE2")
         super.viewDidLoad()
 
     }

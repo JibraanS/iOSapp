@@ -156,7 +156,7 @@
         <!--Search-->
         <scene sceneID="UtU-vJ-YbS">
             <objects>
-                <viewController id="KZM-rD-zne" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController id="KZM-rD-zne" customClass="SearchViewController" customModule="Kitchen_Sink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfQ-Yq-j39">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,30 +540,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STB-9q-hQm">
-                                <rect key="frame" x="76" y="803" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="QdA-XE-c1E"/>
-                                    <constraint firstAttribute="height" constant="60" id="yAr-F1-JjN"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="favorite.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT0-SG-Brj">
-                                <rect key="frame" x="292" y="803" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="TY6-X2-iSa"/>
-                                    <constraint firstAttribute="width" constant="60" id="W7H-Mv-8TJ"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="search.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exF-kU-Gk1">
-                                <rect key="frame" x="173" y="785" width="90" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="5Uv-gB-2ud"/>
-                                    <constraint firstAttribute="height" constant="90" id="fjM-gC-aQv"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="profile.png"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oru-FC-Zls"/>
                         <color key="backgroundColor" red="0.94118529559999997" green="0.9411650896" blue="0.94116908310000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -588,7 +564,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uT-xo-dkP">
-                                <rect key="frame" x="76" y="805" width="60" height="60"/>
+                                <rect key="frame" x="76" y="743" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="VDB-TH-fNo"/>
                                     <constraint firstAttribute="width" constant="60" id="jdT-A6-L5O"/>
@@ -596,7 +572,7 @@
                                 <state key="normal" backgroundImage="favorite.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-zu-g7b">
-                                <rect key="frame" x="292" y="805" width="60" height="60"/>
+                                <rect key="frame" x="292" y="743" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="kFu-9x-ulx"/>
                                     <constraint firstAttribute="width" constant="60" id="o41-ta-Pgs"/>
@@ -604,7 +580,7 @@
                                 <state key="normal" backgroundImage="search.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxA-og-zcd">
-                                <rect key="frame" x="173" y="787" width="90" height="90"/>
+                                <rect key="frame" x="173" y="725" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="qTC-Qz-u5X"/>
                                     <constraint firstAttribute="width" constant="90" id="rRl-Xq-aLc"/>
