@@ -2,7 +2,7 @@
 //  SettingsViewController.swift
 //  Kitchen Sink
 //
-//  Created by Roger Perales II on 11/11/21.
+//  Created by Samuel Perales on 11/11/21.
 //
 
 import UIKit
@@ -13,18 +13,20 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var darkmodeSwitch: UISwitch!
     @IBOutlet weak var glutenSwitch: UISwitch!
     @IBOutlet weak var vegetarianSwitch: UISwitch!
-    @IBOutlet weak var halalSwitch: UISwitch!
     @IBOutlet weak var kosherSwitch: UISwitch!
     
     @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var nameField: UITextField!
     
     // Labels to change color
     @IBOutlet weak var darkmodeLabel: UILabel!
     @IBOutlet weak var dietaryLabel: UILabel!
     @IBOutlet weak var glutenLabel: UILabel!
     @IBOutlet weak var vegetarianLabel: UILabel!
-    @IBOutlet weak var halalLabel: UILabel!
     @IBOutlet weak var kosherLabel: UILabel!
+    @IBOutlet weak var accountLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBAction func darkmode(_ sender: UISwitch) {
         let user = Auth.auth().currentUser
@@ -35,8 +37,9 @@ class SettingsViewController: UIViewController {
             dietaryLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             glutenLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             vegetarianLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            halalLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             kosherLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            accountLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
         }
         else {
             view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
@@ -44,8 +47,9 @@ class SettingsViewController: UIViewController {
             dietaryLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             glutenLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             vegetarianLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            halalLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             kosherLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            accountLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
         UserDefaults.standard.set(sender.isOn, forKey: email + "darkmode")
         UserDefaults.standard.synchronize()
@@ -60,12 +64,6 @@ class SettingsViewController: UIViewController {
         let user = Auth.auth().currentUser
         let email:String = user?.email ?? "none"
         UserDefaults.standard.set(sender.isOn, forKey: email + "vegetarian")
-        UserDefaults.standard.synchronize()
-    }
-    @IBAction func halal(_ sender: UISwitch) {
-        let user = Auth.auth().currentUser
-        let email:String = user?.email ?? "none"
-        UserDefaults.standard.set(sender.isOn, forKey: email + "halal")
         UserDefaults.standard.synchronize()
     }
     @IBAction func kosher(_ sender: UISwitch) {
@@ -87,8 +85,9 @@ class SettingsViewController: UIViewController {
             dietaryLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             glutenLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             vegetarianLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            halalLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             kosherLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            accountLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
         }
         else {
             view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
@@ -96,14 +95,14 @@ class SettingsViewController: UIViewController {
             dietaryLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             glutenLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             vegetarianLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            halalLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             kosherLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            accountLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
         
         darkmodeSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "darkmode")
         glutenSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "gluten")
         vegetarianSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "vegetarian")
-        halalSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "halal")
         kosherSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "kosher")
         
     }
@@ -132,7 +131,6 @@ class SettingsViewController: UIViewController {
                                     defaults.removeObject(forKey: email + "darkmode")
                                     defaults.removeObject(forKey: email + "gluten")
                                     defaults.removeObject(forKey: email + "vegetarian")
-                                    defaults.removeObject(forKey: email + "halal")
                                     defaults.removeObject(forKey: email + "kosher")
                                     user?.delete { error in
                                         if let error = error {

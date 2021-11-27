@@ -14,7 +14,6 @@
 		A400CD85273E1041007768AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CD84273E1041007768AB /* SettingsViewController.swift */; };
 		A400CD87273E2305007768AB /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD86273E2305007768AB /* favorite.png */; };
 		A400CD89273E2311007768AB /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD88273E2311007768AB /* search.png */; };
-		A400CD8B273E2468007768AB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CD8A273E2468007768AB /* FavoritesViewController.swift */; };
 		A400CD8D273E2EE0007768AB /* utensils.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD8C273E2EE0007768AB /* utensils.png */; };
 		A400CD8F273F0F73007768AB /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD8E273F0F73007768AB /* login.png */; };
 		A400CD91273F0F7D007768AB /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD90273F0F7D007768AB /* signup.png */; };
@@ -24,10 +23,13 @@
 		A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936E0273A2355000F6556 /* SceneDelegate.swift */; };
 		A41936E6273A2355000F6556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936E4273A2355000F6556 /* Main.storyboard */; };
 		A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A41936E7273A2355000F6556 /* Kitchen_Sink.xcdatamodeld */; };
-		A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936EC273A2359000F6556 /* LaunchScreen.storyboard */; };
 		A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41936F5273A23AC000F6556 /* LoginViewController.swift */; };
 		A41936F8273A2622000F6556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41936F7273A2622000F6556 /* Assets.xcassets */; };
 		A41936FC273A280D000F6556 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A41936FB273A280D000F6556 /* icon.png */; };
+		A435B5072752DDC900612A92 /* searchbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5032752DDC800612A92 /* searchbutton.png */; };
+		A435B5082752DDC900612A92 /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5042752DDC800612A92 /* dinner.png */; };
+		A435B5092752DDC900612A92 /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5052752DDC800612A92 /* breakfast.png */; };
+		A435B50A2752DDC900612A92 /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5062752DDC900612A92 /* lunch.png */; };
 		F5D3A6D349340959EA1EC27E /* Pods_Kitchen_Sink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +43,6 @@
 		A400CD84273E1041007768AB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A400CD86273E2305007768AB /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
 		A400CD88273E2311007768AB /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
-		A400CD8A273E2468007768AB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A400CD8C273E2EE0007768AB /* utensils.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utensils.png; sourceTree = "<group>"; };
 		A400CD8E273F0F73007768AB /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		A400CD90273F0F7D007768AB /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
@@ -52,11 +53,14 @@
 		A41936E0273A2355000F6556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A41936E5273A2355000F6556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A41936E8273A2355000F6556 /* Kitchen_Sink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kitchen_Sink.xcdatamodel; sourceTree = "<group>"; };
-		A41936ED273A2359000F6556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41936EF273A2359000F6556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41936F5273A23AC000F6556 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A41936F7273A2622000F6556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41936FB273A280D000F6556 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Assets.xcassets/icon.png; sourceTree = "<group>"; };
+		A435B5032752DDC800612A92 /* searchbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchbutton.png; sourceTree = "<group>"; };
+		A435B5042752DDC800612A92 /* dinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dinner.png; sourceTree = "<group>"; };
+		A435B5052752DDC800612A92 /* breakfast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakfast.png; sourceTree = "<group>"; };
+		A435B5062752DDC900612A92 /* lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunch.png; sourceTree = "<group>"; };
 		D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.release.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,12 +118,15 @@
 				A41936DE273A2355000F6556 /* AppDelegate.swift */,
 				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
 				A41936E4273A2355000F6556 /* Main.storyboard */,
+				A435B5052752DDC800612A92 /* breakfast.png */,
+				A435B5042752DDC800612A92 /* dinner.png */,
+				A435B5062752DDC900612A92 /* lunch.png */,
+				A435B5032752DDC800612A92 /* searchbutton.png */,
 				A400CDFE274EE6BD007768AB /* SearchViewController.swift */,
 				A400CDFC274D8ED4007768AB /* delete.png */,
 				A400CD90273F0F7D007768AB /* signup.png */,
 				A400CD8E273F0F73007768AB /* login.png */,
 				A400CD8C273E2EE0007768AB /* utensils.png */,
-				A400CD8A273E2468007768AB /* FavoritesViewController.swift */,
 				A400CD88273E2311007768AB /* search.png */,
 				A400CD86273E2305007768AB /* favorite.png */,
 				A400CD84273E1041007768AB /* SettingsViewController.swift */,
@@ -129,7 +136,6 @@
 				A400CD7E273E06D0007768AB /* ProfileViewController.swift */,
 				A41936F7273A2622000F6556 /* Assets.xcassets */,
 				A41936FB273A280D000F6556 /* icon.png */,
-				A41936EC273A2359000F6556 /* LaunchScreen.storyboard */,
 				A41936EF273A2359000F6556 /* Info.plist */,
 				A41936E7273A2355000F6556 /* Kitchen_Sink.xcdatamodeld */,
 			);
@@ -200,12 +206,15 @@
 				A400CD83273E0F06007768AB /* settings.png in Resources */,
 				A400CD81273E0CAF007768AB /* profile.png in Resources */,
 				A400CD8D273E2EE0007768AB /* utensils.png in Resources */,
-				A41936EE273A2359000F6556 /* LaunchScreen.storyboard in Resources */,
 				A400CDFD274D8ED4007768AB /* delete.png in Resources */,
+				A435B50A2752DDC900612A92 /* lunch.png in Resources */,
+				A435B5072752DDC900612A92 /* searchbutton.png in Resources */,
 				A400CD8F273F0F73007768AB /* login.png in Resources */,
+				A435B5092752DDC900612A92 /* breakfast.png in Resources */,
 				A41936F8273A2622000F6556 /* Assets.xcassets in Resources */,
 				A41936E6273A2355000F6556 /* Main.storyboard in Resources */,
 				269F5D3B273DA2E900ACE691 /* GoogleService-Info.plist in Resources */,
+				A435B5082752DDC900612A92 /* dinner.png in Resources */,
 				A400CD87273E2305007768AB /* favorite.png in Resources */,
 				A400CD91273F0F7D007768AB /* signup.png in Resources */,
 			);
@@ -263,7 +272,6 @@
 				A41936DF273A2355000F6556 /* AppDelegate.swift in Sources */,
 				A41936E1273A2355000F6556 /* SceneDelegate.swift in Sources */,
 				A400CDFF274EE6BD007768AB /* SearchViewController.swift in Sources */,
-				A400CD8B273E2468007768AB /* FavoritesViewController.swift in Sources */,
 				A400CD7F273E06D0007768AB /* ProfileViewController.swift in Sources */,
 				A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */,
 				A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */,
@@ -280,14 +288,6 @@
 				A41936E5273A2355000F6556 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A41936EC273A2359000F6556 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A41936ED273A2359000F6556 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
