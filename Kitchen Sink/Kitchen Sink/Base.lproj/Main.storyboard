@@ -168,6 +168,9 @@
                                     <constraint firstAttribute="height" constant="60" id="WVG-bU-2DN"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="favorite.png"/>
+                                <connections>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="favorites" id="arQ-VK-a60"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shu-Xs-b75">
                                 <rect key="frame" x="292" y="732" width="60" height="60"/>
@@ -204,7 +207,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="searchbutton.png"/>
                                 <connections>
-                                    <segue destination="Zmo-rU-nLc" kind="show" id="1bg-EQ-GYA"/>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="search" id="1bg-EQ-GYA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAT-kb-Jn5">
@@ -214,6 +217,9 @@
                                     <constraint firstAttribute="height" constant="43" id="LgA-Ai-end"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="lunch.png"/>
+                                <connections>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="lunch" id="96m-X4-oTO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN2-LD-gWs">
                                 <rect key="frame" x="147.66666666666666" y="515" width="132.99999999999997" height="43"/>
@@ -222,6 +228,9 @@
                                     <constraint firstAttribute="width" constant="133" id="hj0-JN-fak"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="dinner.png"/>
+                                <connections>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="dinner" id="IDt-Uq-Jv5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-Ak-2Le">
                                 <rect key="frame" x="147.66666666666666" y="397" width="132.99999999999997" height="43"/>
@@ -230,6 +239,9 @@
                                     <constraint firstAttribute="height" constant="43" id="ok2-nC-dxb"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="breakfast.png"/>
+                                <connections>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="breakfast" id="knj-OK-NEi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1xZ-8j-Sfu"/>
@@ -260,6 +272,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="bQ0-zz-Mi7"/>
+                    <connections>
+                        <outlet property="breakfastButton" destination="Bfb-Ak-2Le" id="SK8-ey-qrc"/>
+                        <outlet property="dinnerButton" destination="RN2-LD-gWs" id="196-qn-DV9"/>
+                        <outlet property="lunchButton" destination="PAT-kb-Jn5" id="MAH-NI-vcp"/>
+                        <outlet property="searchButton" destination="h78-z5-jV9" id="Ug6-2M-Gn2"/>
+                        <outlet property="searchField" destination="J2C-Ug-HMQ" id="6LC-p5-T2c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZB-6B-WcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -515,10 +534,10 @@
             </objects>
             <point key="canvasLocation" x="2754.6728971962616" y="119.87041036717063"/>
         </scene>
-        <!--Results View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="fbX-ys-wy8">
             <objects>
-                <viewController id="Zmo-rU-nLc" customClass="ResultsViewController" sceneMemberID="viewController">
+                <viewController id="Zmo-rU-nLc" customClass="TableViewController" customModule="Kitchen_Sink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SWx-RL-MXf">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -527,16 +546,13 @@
                                 <rect key="frame" x="0.0" y="44" width="428" height="701"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mN8-Q7-dBv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NZS-KY-x06">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mN8-Q7-dBv" id="Odx-T0-ty5">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NZS-KY-x06" id="X5V-xR-tK6">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="fqP-Fk-HIF" kind="show" id="mgs-Gh-vV5"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -550,6 +566,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d2P-Or-Hh4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Miz-JA-6qI" id="ZAU-DT-mJb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7z-s6-yyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -560,7 +579,7 @@
             <objects>
                 <viewController id="fqP-Fk-HIF" customClass="RecipeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWX-Ub-6Ml">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uT-xo-dkP">
@@ -617,7 +636,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="74A-bu-oay"/>
+        <segue reference="arQ-VK-a60"/>
+        <segue reference="4KC-6t-7Xh"/>
         <segue reference="nm7-jD-zlo"/>
     </inferredMetricsTieBreakers>
     <resources>

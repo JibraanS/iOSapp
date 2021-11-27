@@ -30,6 +30,8 @@
 		A435B5092752DDC900612A92 /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5052752DDC800612A92 /* breakfast.png */; };
 		A435B50A2752DDC900612A92 /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B5062752DDC900612A92 /* lunch.png */; };
 		A435B50C2752E1D500612A92 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B50B2752E1D500612A92 /* SearchViewController.swift */; };
+		A435B50E2752E4E900612A92 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B50D2752E4E900612A92 /* Recipe.swift */; };
+		A435B5102752E78500612A92 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B50F2752E78500612A92 /* TableViewController.swift */; };
 		F5D3A6D349340959EA1EC27E /* Pods_Kitchen_Sink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		A435B5052752DDC800612A92 /* breakfast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakfast.png; sourceTree = "<group>"; };
 		A435B5062752DDC900612A92 /* lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunch.png; sourceTree = "<group>"; };
 		A435B50B2752E1D500612A92 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A435B50D2752E4E900612A92 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		A435B50F2752E78500612A92 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.release.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				A435B50B2752E1D500612A92 /* SearchViewController.swift */,
+				A435B50F2752E78500612A92 /* TableViewController.swift */,
+				A435B50D2752E4E900612A92 /* Recipe.swift */,
 				269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */,
 				A41936DE273A2355000F6556 /* AppDelegate.swift */,
 				A41936E0273A2355000F6556 /* SceneDelegate.swift */,
@@ -276,6 +282,8 @@
 				A41936F6273A23AC000F6556 /* LoginViewController.swift in Sources */,
 				A41936E9273A2355000F6556 /* Kitchen_Sink.xcdatamodeld in Sources */,
 				A400CD85273E1041007768AB /* SettingsViewController.swift in Sources */,
+				A435B5102752E78500612A92 /* TableViewController.swift in Sources */,
+				A435B50E2752E4E900612A92 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

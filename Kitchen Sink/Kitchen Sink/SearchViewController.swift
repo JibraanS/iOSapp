@@ -8,16 +8,13 @@
 import UIKit
 import Firebase
 
-//class Recipe {
-//    var name = ""
-//    var description = ""
-//    var type = "breakfast" //breakfast, lunch, dinner
-//    var ingredients = [""]
-//    var directions = [""]
-//}
-
 class SearchViewController: UIViewController {
-
+    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var breakfastButton: UIButton!
+    @IBOutlet weak var lunchButton: UIButton!
+    @IBOutlet weak var dinnerButton: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         // get current user
         let user = Auth.auth().currentUser
@@ -37,5 +34,16 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let nextVC = segue.destination as? TableViewController
+        if segue.identifier == "search" {
+            nextVC?.resultType = searchField.text ?? ""
+        }
+        else {
+            nextVC?.resultType = segue.identifier ?? ""
+        }
+    }
+
 
 }
