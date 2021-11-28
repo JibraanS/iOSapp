@@ -330,8 +330,8 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="profile.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-6d-tTq">
-                                <rect key="frame" x="287" y="256" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-6d-tTq">
+                                <rect key="frame" x="292" y="37" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Htd-n3-c8k"/>
                                     <constraint firstAttribute="height" constant="70" id="amb-DT-VVj"/>
@@ -341,6 +341,12 @@
                                     <segue destination="Ghw-th-f4O" kind="push" id="kRf-0Y-XEC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqr-Gn-VBH">
+                                <rect key="frame" x="141.66666666666666" y="303" width="144.99999999999997" height="32"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NeE-ON-JfW"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -348,24 +354,26 @@
                         <constraints>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="gcP-pt-BbB" secondAttribute="bottom" constant="39" id="0Vt-Ed-nGX"/>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="Cb3-Wc-aoT" secondAttribute="bottom" constant="51" id="2Lk-Ex-l3F"/>
+                            <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="J0L-6d-tTq" secondAttribute="trailing" constant="66" id="8nR-eM-oqv"/>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="gcP-pt-BbB" secondAttribute="trailing" constant="164" id="A4h-gA-vHx"/>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="Cb3-Wc-aoT" secondAttribute="trailing" constant="75" id="CsR-Px-XrC"/>
                             <constraint firstItem="gcP-pt-BbB" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="174" id="GtI-XD-HcF"/>
+                            <constraint firstItem="Uqr-Gn-VBH" firstAttribute="centerX" secondItem="NeE-ON-JfW" secondAttribute="centerX" id="J9b-hQ-InD"/>
                             <constraint firstItem="7ht-Dl-FV8" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="114" id="NEN-nm-eaL"/>
-                            <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="J0L-6d-tTq" secondAttribute="bottom" constant="451" id="YPN-JG-yWY"/>
+                            <constraint firstItem="Uqr-Gn-VBH" firstAttribute="top" secondItem="NeE-ON-JfW" secondAttribute="top" constant="303" id="NQG-QB-eLS"/>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="bottom" secondItem="6E5-Gs-jSZ" secondAttribute="bottom" constant="51" id="bzv-0r-cwk"/>
+                            <constraint firstItem="J0L-6d-tTq" firstAttribute="top" secondItem="NeE-ON-JfW" secondAttribute="top" constant="37" id="nNu-0K-q3m"/>
                             <constraint firstItem="6E5-Gs-jSZ" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="77" id="odN-v4-wgC"/>
-                            <constraint firstItem="J0L-6d-tTq" firstAttribute="top" secondItem="NeE-ON-JfW" secondAttribute="top" constant="283" id="us1-xr-cL3"/>
+                            <constraint firstItem="J0L-6d-tTq" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="292" id="snr-4l-baw"/>
                             <constraint firstItem="7ht-Dl-FV8" firstAttribute="top" secondItem="NeE-ON-JfW" secondAttribute="top" constant="75" id="wor-bg-2Jv"/>
-                            <constraint firstItem="J0L-6d-tTq" firstAttribute="leading" secondItem="NeE-ON-JfW" secondAttribute="leading" constant="288" id="x4v-8m-BVr"/>
                             <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="7ht-Dl-FV8" secondAttribute="trailing" constant="114" id="x8t-0m-zfz"/>
-                            <constraint firstItem="NeE-ON-JfW" firstAttribute="trailing" secondItem="J0L-6d-tTq" secondAttribute="trailing" constant="70" id="ygM-eK-kYh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="8M7-Cp-JH9">
                         <barButtonItem key="backBarButtonItem" title="Profile" id="Vir-3Y-YeX"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameLabel" destination="Uqr-Gn-VBH" id="qGa-dx-BtZ"/>
                         <outlet property="profileButton" destination="7ht-Dl-FV8" id="COz-h0-Rw8"/>
                     </connections>
                 </viewController>
@@ -425,7 +433,7 @@
                                     <action selector="vegetarian:" destination="Ghw-th-f4O" eventType="valueChanged" id="EVx-e8-bGn"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etp-YT-wgE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etp-YT-wgE">
                                 <rect key="frame" x="130" y="385" width="189" height="32"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -456,6 +464,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameFieldDidChange:" destination="Ghw-th-f4O" eventType="editingDidEnd" id="hRB-jn-w1H"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4h-6G-EGA">
                                 <rect key="frame" x="126" y="716" width="176" height="50"/>

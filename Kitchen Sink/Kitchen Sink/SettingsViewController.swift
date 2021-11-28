@@ -28,6 +28,47 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        // get current user
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        
+        // set background based on darkmode
+        if (UserDefaults.standard.bool(forKey: email + "darkmode")) {
+            view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            darkmodeLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            dietaryLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            glutenLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            vegetarianLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            kosherLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            accountLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+        }
+        else {
+            view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            darkmodeLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            dietaryLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            glutenLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            vegetarianLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            kosherLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            accountLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+        }
+        
+        darkmodeSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "darkmode")
+        glutenSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "gluten")
+        vegetarianSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "vegetarian")
+        kosherSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "kosher")
+        
+        if UserDefaults.standard.string(forKey: email + "name") != nil {
+            nameField.text = UserDefaults.standard.string(forKey: email + "name")
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     @IBAction func darkmode(_ sender: UISwitch) {
         let user = Auth.auth().currentUser
         let email:String = user?.email ?? "none"
@@ -73,44 +114,14 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.synchronize()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // get current user
+    
+    @IBAction func nameFieldDidChange(_ sender: Any) {
         let user = Auth.auth().currentUser
         let email:String = user?.email ?? "none"
-        
-        // set background based on darkmode
-        if (UserDefaults.standard.bool(forKey: email + "darkmode")) {
-            view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            darkmodeLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            dietaryLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            glutenLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            vegetarianLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            kosherLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            accountLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            nameLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-        }
-        else {
-            view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-            darkmodeLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            dietaryLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            glutenLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            vegetarianLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            kosherLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            accountLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-            nameLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
-        }
-        
-        darkmodeSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "darkmode")
-        glutenSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "gluten")
-        vegetarianSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "vegetarian")
-        kosherSwitch?.isOn = UserDefaults.standard.bool(forKey: email + "kosher")
-        
+        UserDefaults.standard.set(nameField.text, forKey: email + "name")
+        UserDefaults.standard.synchronize()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func deleteAccount(_ sender: Any) {
         var confirmDelete = false
         let controller = UIAlertController(

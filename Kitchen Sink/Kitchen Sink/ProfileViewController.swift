@@ -33,6 +33,8 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     
     @IBOutlet weak var profileButton: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
         // get current user
         let user = Auth.auth().currentUser
@@ -41,9 +43,11 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         // set background based on darkmode
         if (UserDefaults.standard.bool(forKey: email + "darkmode")) {
             view.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
+            nameLabel.textColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
         }
         else {
             view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+            nameLabel.textColor =  #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
         
         if (UserDefaults.standard.object(forKey: email + "image") != nil){
@@ -51,6 +55,10 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
                 let image = UIImage(data: imageData) {
                 profileButton.setBackgroundImage(image.circleMasked, for: UIControl.State.normal)
             }
+        }
+        
+        if UserDefaults.standard.string(forKey: email + "name") != nil {
+            nameLabel.text = UserDefaults.standard.string(forKey: email + "name")
         }
         
     }
