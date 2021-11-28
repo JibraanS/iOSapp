@@ -11,7 +11,7 @@ import Firebase
 class Recipe {
     var name = ""
     var description = ""
-    var type = "breakfast" //breakfast, lunch, dinner
+    var type = "breakfast" //breakfast, lunc dinner
     var ingredients = [""]
     var directions = [""]
 }
