@@ -7,17 +7,16 @@
 
 import UIKit
 import Firebase
+import CoreData
 
-
-class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     var resultType: String = ""
     let textCellIdentifier = "TextCell"
-    
-//  public var recipes:[Recipe] = [Recipe(), Recipe(), Recipe()]
-    var displayed_recipes: [Recipe] = []
+    var coreRecipes: [NSManagedObject] = []
+    var displayed_recipes: [NSManagedObject] = []
     
     override func viewWillAppear(_ animated: Bool) {
         // get current user
@@ -36,12 +35,22 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for r in recipes{
-            if r.type.contains(resultType) {
+        // core data setup
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CoreRecipe")
+        do {
+            coreRecipes = try managedContext.fetch(fetchRequest)
+          } catch let error as NSError {
+            print("Fetch failed.")
+        }
+                
+        for r in coreRecipes {
+            if((r.value(forKeyPath: "type") as! String).contains(resultType)) {
                 displayed_recipes.append(r)
             }
             else {
-                for i in r.ingredients {
+                for i in (r.value(forKeyPath: "ingredients") as! [String]) {
                     if i.contains(resultType) {
                         displayed_recipes.append(r)
                     }
@@ -60,7 +69,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         let row = indexPath.row
         cell.textLabel!.numberOfLines = 5
-        cell.textLabel?.text = displayed_recipes[row].name
+        cell.textLabel?.text = displayed_recipes[row].value(forKey: "name") as? String
         return cell
     }
 }

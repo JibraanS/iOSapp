@@ -11,8 +11,6 @@ import FirebaseAuth
 import CoreData
 
 var recipes: [Recipe] = []
-// need to figure out if this works... if not i can just scan for recipes of the same name
-var recipesRead = false
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
@@ -42,40 +40,64 @@ class SearchViewController: UIViewController {
     }
     
     func readFile() {
-        if(recipesRead == false) {
-            let fileURL = Bundle.main.path(forResource: "recipes", ofType: "txt")
-            var readString = ""
-            do {
-                readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
-                let myStrings = readString.components(separatedBy: "\n\n")
-                for dishes in myStrings {
-                    let components = dishes.components(separatedBy: .newlines)
-                    let recipeTags = components[4].components(separatedBy: ", ")
-                    let recipeIngs = components[5].components(separatedBy: ", ")
-                    let recipeDirs = components[6].components(separatedBy: ". ")
-                    let recipe = Recipe(_name: components[0], _time: components[1], _desc: components[2], _type: components[3], _tags: recipeTags, _ingredients: recipeIngs, _dirs: recipeDirs)
-                    recipes.append(recipe)
-                    // this is ABSOLUTELY frankensteined together and i don't know if it works. we'll see!
+        let fileURL = Bundle.main.path(forResource: "recipes", ofType: "txt")
+        var readString = ""
+        do {
+            readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
+            let myStrings = readString.components(separatedBy: "\n\n")
+            for dishes in myStrings {
+                let components = dishes.components(separatedBy: .newlines)
+                let recipeTags = components[4].components(separatedBy: ", ")
+                let recipeIngs = components[5].components(separatedBy: ", ")
+                let recipeDirs = components[6].components(separatedBy: ". ")
+                let recipe = Recipe(_name: components[0], _time: components[1], _desc: components[2], _type: components[3], _tags: recipeTags, _ingredients: recipeIngs, _dirs: recipeDirs)
+                recipes.append(recipe)
+                if(checkDuplicate(checkString: recipe.name) == false) {
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     let context = appDelegate.persistentContainer.viewContext
-                    print("success!")
-                    let newCoreRecipe = NSEntityDescription.insertNewObject(forEntityName: "CoreRecipe", into: context)
+                    let entity = NSEntityDescription.entity(forEntityName: "CoreRecipe", in: context)!
+                    let newCoreRecipe = NSManagedObject(entity: entity, insertInto: context)
                     newCoreRecipe.setValue(recipe.name, forKey: "name")
                     newCoreRecipe.setValue(recipe.time, forKey: "time")
                     newCoreRecipe.setValue(recipe.description, forKey: "desc")
+                    newCoreRecipe.setValue(recipe.type, forKey: "type")
                     newCoreRecipe.setValue(recipe.tags, forKey: "tags")
                     newCoreRecipe.setValue(recipe.ingredients, forKey: "ingredients")
                     newCoreRecipe.setValue(recipe.directions, forKey: "directions")
+                    do {
+                        try context.save()
+                      } catch let error as NSError {
+                        print("Save failed.")
+                      }
                 }
-            } catch let error as NSError {
-                print("Failed to read file")
-                print(error)
+                
             }
+        } catch let error as NSError {
+            print("Failed to read file")
+            print(error)
         }
-        recipesRead = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    func checkDuplicate(checkString: String) -> Bool {
+        var _coreRecipes: [NSManagedObject] = []
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CoreRecipe")
+        do {
+            _coreRecipes = try managedContext.fetch(fetchRequest)
+          } catch let error as NSError {
+            print("Fetch failed.")
+        }
+        // search for duplicates
+        for recipe in _coreRecipes {
+            if((recipe.value(forKey: "name") as! String) == checkString) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as? TableViewController
         if segue.identifier == "search" {
             nextVC?.resultType = searchField.text?.lowercased() ?? ""
@@ -84,6 +106,4 @@ class SearchViewController: UIViewController {
             nextVC?.resultType = segue.identifier ?? ""
         }
     }
-
-
 }
