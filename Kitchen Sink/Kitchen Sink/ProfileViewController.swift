@@ -68,7 +68,18 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     @IBAction func uploadImage(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
+        let controller = UIAlertController(
+            title: "Choose a source for your profile image.",
+            message: "",
+            preferredStyle: .alert
+        )
+        controller.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in self.getCameraImage()}))
+        controller.addAction(UIAlertAction(title: "Photo Gallery", style: .default, handler: {(action: UIAlertAction) in self.getGalleryImage()}))
+        self.present(controller, animated: true, completion: nil)
+    }
+                                           
+    func getGalleryImage() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.allowsEditing = false
@@ -76,6 +87,17 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
             self.present(imagePicker, animated: true, completion: nil)
             //let pickedImage = imagePicker as? UIImage
             //profileButton.setBackgroundImage(pickedImage, for: UIControl.State.normal)
+        }
+    }
+    
+    func getCameraImage() {
+        print("no camera?")
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
