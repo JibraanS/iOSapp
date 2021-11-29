@@ -223,7 +223,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="lunch.png"/>
                                 <connections>
-                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="lunch" id="96m-X4-oTO"/>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="Lunch" id="96m-X4-oTO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN2-LD-gWs">
@@ -245,7 +245,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="breakfast.png"/>
                                 <connections>
-                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="breakfast" id="knj-OK-NEi"/>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="Breakfast" id="knj-OK-NEi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -728,7 +728,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="arQ-VK-a60"/>
+        <segue reference="IDt-Uq-Jv5"/>
         <segue reference="4KC-6t-7Xh"/>
         <segue reference="nm7-jD-zlo"/>
     </inferredMetricsTieBreakers>

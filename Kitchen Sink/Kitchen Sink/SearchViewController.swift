@@ -78,7 +78,7 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let nextVC = segue.destination as? TableViewController
         if segue.identifier == "search" {
-            nextVC?.resultType = searchField.text ?? ""
+            nextVC?.resultType = searchField.text?.lowercased() ?? ""
         }
         else {
             nextVC?.resultType = segue.identifier ?? ""
