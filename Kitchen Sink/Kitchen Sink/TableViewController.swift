@@ -23,7 +23,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var resultType: String = ""
     let textCellIdentifier = "TextCell"
     
-    public var recipes:[Recipe] = []
+    public var recipes:[Recipe] = [Recipe(), Recipe(), Recipe()]
     
     override func viewWillAppear(_ animated: Bool) {
         // get current user
@@ -40,6 +40,13 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(resultType)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
@@ -51,10 +58,4 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.textLabel?.text = "Recipe"
         return cell
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(resultType)
-    }
-    
 }
