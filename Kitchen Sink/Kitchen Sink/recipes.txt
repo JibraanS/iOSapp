@@ -1,32 +1,32 @@
-Name: Blueberry Pancakes
-Time: 20 Minutes
-Description: Super thick and fluffy blueberry pancakes! Melt in your mouth, golden brown, and bursting with blueberries.
-Type: Breakfast
-Tags: Vegetarian, Kosher
-Ingredients: 2 tbsp white vinegar, 1 cup flour, 2 tbsp sugar, 1 tsp baking powder, ½ tsp baking soda, ½ tsp salt, 1 egg, 2 tbsp butter, 1 cup blueberries
-Directions: Mix milk and vinegar and let sit for 2 minutes. Whisk in dry ingredients. Whisk in the egg, milk, and melted butter. Heat a nonstick pan over medium heat and add some butter
+Blueberry Pancakes
+20 Minutes
+Super thick and fluffy blueberry pancakes! Melt in your mouth, golden brown, and bursting with blueberries.
+Breakfast
+Vegetarian, Kosher
+2 tbsp white vinegar, 1 cup flour, 2 tbsp sugar, 1 tsp baking powder, ½ tsp baking soda, ½ tsp salt, 1 egg, 2 tbsp butter, 1 cup blueberries
+Mix milk and vinegar and let sit for 2 minutes. Whisk in dry ingredients. Whisk in the egg, milk, and melted butter. Heat a nonstick pan over medium heat and add some butter
 Pour ⅓ cup of batter into the pan and add a few blueberries on top. Flip when bubbling and cook for an additional 1-2 minutes. Serve with butter and maple syrup.
 
-Name: Maple Candied Bacon
-Time: 30 Minutes
-Description: Delicious, sweet and savory bacon.
-Type: Breakfast
-Tags: Gluten-Free
-Ingredients: 1 pound thick sliced bacon, ½ cup maple syrup, 1 tsp dijon mustard, black pepper
-Directions: Preheat the oven to 400F. Line a rimmed baking sheet with foil and place a baking rack over the sheet. Arrange bacon on the sheet. In a small bowl mix the syrup and mustard. Pour over the bacon and bake for 12-15 minutes. Flip and add more of the mixture. Bake for an additional 5-10 minutes. Remove the sheet from the oven and sprinkle it with black pepper.
+Maple Candied Bacon
+30 Minutes
+Delicious, sweet and savory bacon.
+Breakfast
+Gluten-Free
+1 pound thick sliced bacon, ½ cup maple syrup, 1 tsp dijon mustard, black pepper
+Preheat the oven to 400F. Line a rimmed baking sheet with foil and place a baking rack over the sheet. Arrange bacon on the sheet. In a small bowl mix the syrup and mustard. Pour over the bacon and bake for 12-15 minutes. Flip and add more of the mixture. Bake for an additional 5-10 minutes. Remove the sheet from the oven and sprinkle it with black pepper.
 
-Name: Mixed Berries and Banana Smoothie
-Time: 5 Minutes
-Description: Healthy and nutritious!
-Type: Breakfast
-Tags: Gluten-Free, Vegetarian, Kosher
-Ingredients: 1 cup frozen mixed berries, 1 frozen banana, ½ cup low fat yogurt, ¼ cup orange juice, 1 tsp honey
-Directions: Combine all ingredients in a blender until smooth.
+Mixed Berries and Banana Smoothie
+5 Minutes
+Healthy and nutritious!
+Breakfast
+Gluten-Free, Vegetarian, Kosher
+1 cup frozen mixed berries, 1 frozen banana, ½ cup low fat yogurt, ¼ cup orange juice, 1 tsp honey
+Combine all ingredients in a blender until smooth.
 
-Name: Sweet and Sour Meatballs
-Time: 50 Minutes
-Description: An easy, delicious recipe made with ingredients you always have around the house! A definite winner! Wonderful served with rice!
-Type: Lunch
-Tags: Kosher
-Ingredients: 1 pound ground beef, 1 egg, ¼ cup bread crumbs, 1 onion (diced), 1 cup brown sugar, 3 tbsp flour, 1 ½ cups water, ¼ cup distilled vinegar, 3 tbsp soy sauce
-Directions: In a bowl, combine the beef, egg, bread crumbs and onion. Mix thoroughly and shape into golf ball sized balls. Over medium heat, brown the meatballs and set aside. In a saucepan, combine the brown sugar, flour, water, white vinegar, and soy sauce. Add meatballs and bring to a boil. Reduce heat and let simmer, mixing for 30 minutes.
+Sweet and Sour Meatballs
+50 Minutes
+An easy, delicious recipe made with ingredients you always have around the house! A definite winner! Wonderful served with rice!
+Lunch
+Kosher
+1 pound ground beef, 1 egg, ¼ cup bread crumbs, 1 onion (diced), 1 cup brown sugar, 3 tbsp flour, 1 ½ cups water, ¼ cup distilled vinegar, 3 tbsp soy sauce
+In a bowl, combine the beef, egg, bread crumbs and onion. Mix thoroughly and shape into golf ball sized balls. Over medium heat, brown the meatballs and set aside. In a saucepan, combine the brown sugar, flour, water, white vinegar, and soy sauce. Add meatballs and bring to a boil. Reduce heat and let simmer, mixing for 30 minutes.

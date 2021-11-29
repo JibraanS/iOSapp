@@ -121,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A435B50B2752E1D500612A92 /* SearchViewController.swift */,
+				A435B50D2752E4E900612A92 /* Recipe.swift */,
 				2606BB7C27545ADB00E0CB73 /* recipes.txt */,
 				A435B50F2752E78500612A92 /* TableViewController.swift */,
 				269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */,
