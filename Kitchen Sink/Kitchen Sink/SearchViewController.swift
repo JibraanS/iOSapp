@@ -14,12 +14,14 @@ class Recipe {
     var time = ""
     var description = ""
     var type = "" //breakfast, lunch dinner
-    var tags = ""
+    var tags = [""]
     var ingredients = [""]
     var directions = [""]
 }
 
 var recipes:[Recipe] = []
+// need to figure out if this works... if not i can just scan for recipes of the same name
+var recipesRead = false
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
@@ -45,30 +47,36 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let fileURL = Bundle.main.path(forResource: "recipes", ofType: "txt")
-        var readString = ""
-        do {
-            readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
-            let myStrings = readString.components(separatedBy: "\n\n")
-            for dishes in myStrings{
-                var recipe = Recipe()
-                let components = dishes.components(separatedBy: .newlines)
-                recipe.name = components[0]
-                recipe.time = components[1]
-                recipe.description = components[2]
-                recipe.type = components[3]
-                recipe.tags = components[4]
-                let ingredient_list = components[5].components(separatedBy: ", ")
-                recipe.ingredients = ingredient_list
-                let direction_list = components[6].components(separatedBy: ". ")
-                recipe.directions = direction_list
-                recipes.append(recipe)
+        readFile()
+    }
+    
+    func readFile() {
+        if(recipesRead == false) {
+            let fileURL = Bundle.main.path(forResource: "recipes", ofType: "txt")
+            var readString = ""
+            do {
+                readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
+                let myStrings = readString.components(separatedBy: "\n\n")
+                for dishes in myStrings{
+                    var recipe = Recipe()
+                    let components = dishes.components(separatedBy: .newlines)
+                    recipe.name = components[0]
+                    recipe.time = components[1]
+                    recipe.description = components[2]
+                    recipe.type = components[3]
+                    recipe.tags = components[4].components(separatedBy: ", ")
+                    let ingredient_list = components[5].components(separatedBy: ", ")
+                    recipe.ingredients = ingredient_list
+                    let direction_list = components[6].components(separatedBy: ". ")
+                    recipe.directions = direction_list
+                    recipes.append(recipe)
+                }
+            } catch let error as NSError{
+                print("Failed to read file")
+                print(error)
             }
-        } catch let error as NSError{
-            print("Failed to read file")
-            print(error)
         }
+        recipesRead = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
