@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2606BB7D27545ADB00E0CB73 /* recipes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2606BB7C27545ADB00E0CB73 /* recipes.txt */; };
 		269F5D3B273DA2E900ACE691 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */; };
 		A400CD7F273E06D0007768AB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400CD7E273E06D0007768AB /* ProfileViewController.swift */; };
 		A400CD81273E0CAF007768AB /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A400CD80273E0CAF007768AB /* profile.png */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2606BB7C27545ADB00E0CB73 /* recipes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = recipes.txt; sourceTree = "<group>"; };
 		269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6BEE669883E12E1552BE7CD3 /* Pods-Kitchen Sink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.debug.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.debug.xcconfig"; sourceTree = "<group>"; };
 		96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitchen_Sink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A435B50B2752E1D500612A92 /* SearchViewController.swift */,
+				2606BB7C27545ADB00E0CB73 /* recipes.txt */,
 				A435B50F2752E78500612A92 /* TableViewController.swift */,
 				A435B50D2752E4E900612A92 /* Recipe.swift */,
 				269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */,
@@ -210,6 +213,7 @@
 				A41936FC273A280D000F6556 /* icon.png in Resources */,
 				A400CD89273E2311007768AB /* search.png in Resources */,
 				A400CD83273E0F06007768AB /* settings.png in Resources */,
+				2606BB7D27545ADB00E0CB73 /* recipes.txt in Resources */,
 				A400CD81273E0CAF007768AB /* profile.png in Resources */,
 				A400CD8D273E2EE0007768AB /* utensils.png in Resources */,
 				A400CDFD274D8ED4007768AB /* delete.png in Resources */,

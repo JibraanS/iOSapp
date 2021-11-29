@@ -8,13 +8,6 @@
 import UIKit
 import Firebase
 
-class Recipe {
-    var name = ""
-    var description = ""
-    var type = "breakfast" //breakfast, lunc dinner
-    var ingredients = [""]
-    var directions = [""]
-}
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -23,7 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var resultType: String = ""
     let textCellIdentifier = "TextCell"
     
-    public var recipes:[Recipe] = [Recipe(), Recipe(), Recipe()]
+//    public var recipes:[Recipe] = [Recipe(), Recipe(), Recipe()]
     
     override func viewWillAppear(_ animated: Bool) {
         // get current user
@@ -55,7 +48,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         let row = indexPath.row
         cell.textLabel!.numberOfLines = 5
-        cell.textLabel?.text = "Recipe"
+        cell.textLabel?.text = recipes[row].name
         return cell
     }
 }
