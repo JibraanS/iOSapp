@@ -54,9 +54,18 @@ class SearchViewController: UIViewController {
                     let recipeIngs = components[5].components(separatedBy: ", ")
                     let recipeDirs = components[6].components(separatedBy: ". ")
                     let recipe = Recipe(_name: components[0], _time: components[1], _desc: components[2], _type: components[3], _tags: recipeTags, _ingredients: recipeIngs, _dirs: recipeDirs)
-                    print(recipeDirs)
                     recipes.append(recipe)
-                    
+                    // this is ABSOLUTELY frankensteined together and i don't know if it works. we'll see!
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let context = appDelegate.persistentContainer.viewContext
+                    print("success!")
+                    let newCoreRecipe = NSEntityDescription.insertNewObject(forEntityName: "CoreRecipe", into: context)
+                    newCoreRecipe.setValue(recipe.name, forKey: "name")
+                    newCoreRecipe.setValue(recipe.time, forKey: "time")
+                    newCoreRecipe.setValue(recipe.description, forKey: "desc")
+                    newCoreRecipe.setValue(recipe.tags, forKey: "tags")
+                    newCoreRecipe.setValue(recipe.ingredients, forKey: "ingredients")
+                    newCoreRecipe.setValue(recipe.directions, forKey: "directions")
                 }
             } catch let error as NSError {
                 print("Failed to read file")
