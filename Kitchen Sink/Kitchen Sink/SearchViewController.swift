@@ -15,8 +15,8 @@ class Recipe {
     var description = ""
     var type = "" //breakfast, lunch dinner
     var tags = ""
-    var ingredients = ""
-    var directions = ""
+    var ingredients = [""]
+    var directions = [""]
 }
 
 var recipes:[Recipe] = []
@@ -54,14 +54,15 @@ class SearchViewController: UIViewController {
             for dishes in myStrings{
                 var recipe = Recipe()
                 let components = dishes.components(separatedBy: .newlines)
-                print(components)
                 recipe.name = components[0]
                 recipe.time = components[1]
                 recipe.description = components[2]
                 recipe.type = components[3]
                 recipe.tags = components[4]
-                recipe.ingredients = components[5]
-                recipe.directions = components[6]
+                let ingredient_list = components[5].components(separatedBy: ", ")
+                recipe.ingredients = ingredient_list
+                let direction_list = components[6].components(separatedBy: ". ")
+                recipe.directions = direction_list
                 recipes.append(recipe)
             }
         } catch let error as NSError{
