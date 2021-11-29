@@ -96,7 +96,7 @@ class SearchViewController: UIViewController {
         }
         return false
     }
-    // TODO: not allow segue if search field blank?
+    // TODO: not allow segue if search field blank
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as? TableViewController
         if segue.identifier == "search" {
