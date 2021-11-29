@@ -5,19 +5,11 @@
         <attribute name="directions" optional="YES" attributeType="Transformable"/>
         <attribute name="ingredients" optional="YES" attributeType="Transformable"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-<<<<<<< HEAD
-        <attribute name="tags" optional="YES" attributeType="String"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
-    </entity>
-    <elements>
-        <element name="R" positionX="-63" positionY="-18" width="128" height="119"/>
-=======
         <attribute name="tags" optional="YES" attributeType="Transformable"/>
         <attribute name="time" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="CoreRecipe" positionX="-63" positionY="-18" width="128" height="134"/>
->>>>>>> dd4892437c07ec68e7a1941cfa303c8b104d54fe
     </elements>
 </model>

@@ -33,6 +33,7 @@
 		A435B50C2752E1D500612A92 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B50B2752E1D500612A92 /* SearchViewController.swift */; };
 		A435B5102752E78500612A92 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B50F2752E78500612A92 /* TableViewController.swift */; };
 		A435B512275461D200612A92 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435B511275461D200612A92 /* RecipeViewController.swift */; };
+		A8965BA527547129006479B7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8965BA427547129006479B7 /* Recipe.swift */; };
 		F5D3A6D349340959EA1EC27E /* Pods_Kitchen_Sink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A4B7C487885438E54ED27B /* Pods_Kitchen_Sink.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		A435B50B2752E1D500612A92 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A435B50F2752E78500612A92 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A435B511275461D200612A92 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		A8965BA427547129006479B7 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D5FA5BD69A7FC54826CC81F2 /* Pods-Kitchen Sink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchen Sink.release.xcconfig"; path = "Target Support Files/Pods-Kitchen Sink/Pods-Kitchen Sink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +122,8 @@
 		A41936DD273A2355000F6556 /* Kitchen Sink */ = {
 			isa = PBXGroup;
 			children = (
+				A8965BA427547129006479B7 /* Recipe.swift */,
 				A435B50B2752E1D500612A92 /* SearchViewController.swift */,
-				A435B50D2752E4E900612A92 /* Recipe.swift */,
 				2606BB7C27545ADB00E0CB73 /* recipes.txt */,
 				A435B50F2752E78500612A92 /* TableViewController.swift */,
 				269F5D3A273DA2E900ACE691 /* GoogleService-Info.plist */,
@@ -289,6 +291,7 @@
 				A400CD85273E1041007768AB /* SettingsViewController.swift in Sources */,
 				A435B5102752E78500612A92 /* TableViewController.swift in Sources */,
 				A435B512275461D200612A92 /* RecipeViewController.swift in Sources */,
+				A8965BA527547129006479B7 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
