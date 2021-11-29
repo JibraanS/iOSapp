@@ -71,7 +71,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         let row = indexPath.row
         cell.textLabel!.numberOfLines = 5
-        cell.textLabel?.text = displayed_recipes[row].name
+        cell.textLabel?.text = displayed_recipes[row].value(forKey: "name") as? String
         //cell.backgroundColor = UIColor.clear
         
         // get current user
@@ -86,7 +86,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
             cell.textLabel?.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
-        cell.textLabel?.text = displayed_recipes[row].value(forKey: "name") as? String
         return cell
     }
 }
