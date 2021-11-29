@@ -16,7 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var resultType: String = ""
     let textCellIdentifier = "TextCell"
     
-//    public var recipes:[Recipe] = [Recipe(), Recipe(), Recipe()]
+//  public var recipes:[Recipe] = [Recipe(), Recipe(), Recipe()]
     
     override func viewWillAppear(_ animated: Bool) {
         // get current user
