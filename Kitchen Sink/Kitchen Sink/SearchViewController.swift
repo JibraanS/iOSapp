@@ -8,18 +8,9 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import CoreData
 
-class Recipe {
-    var name = ""
-    var time = ""
-    var description = ""
-    var type = "" //breakfast, lunch dinner
-    var tags = [""]
-    var ingredients = [""]
-    var directions = [""]
-}
-
-var recipes:[Recipe] = []
+var recipes: [Recipe] = []
 // need to figure out if this works... if not i can just scan for recipes of the same name
 var recipesRead = false
 
@@ -57,21 +48,17 @@ class SearchViewController: UIViewController {
             do {
                 readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
                 let myStrings = readString.components(separatedBy: "\n\n")
-                for dishes in myStrings{
-                    var recipe = Recipe()
+                for dishes in myStrings {
                     let components = dishes.components(separatedBy: .newlines)
-                    recipe.name = components[0]
-                    recipe.time = components[1]
-                    recipe.description = components[2]
-                    recipe.type = components[3]
-                    recipe.tags = components[4].components(separatedBy: ", ")
-                    let ingredient_list = components[5].components(separatedBy: ", ")
-                    recipe.ingredients = ingredient_list
-                    let direction_list = components[6].components(separatedBy: ". ")
-                    recipe.directions = direction_list
+                    let recipeTags = components[4].components(separatedBy: ", ")
+                    let recipeIngs = components[5].components(separatedBy: ", ")
+                    let recipeDirs = components[6].components(separatedBy: ". ")
+                    let recipe = Recipe(_name: components[0], _time: components[1], _desc: components[2], _type: components[3], _tags: recipeTags, _ingredients: recipeIngs, _dirs: recipeDirs)
+                    print(recipeDirs)
                     recipes.append(recipe)
+                    
                 }
-            } catch let error as NSError{
+            } catch let error as NSError {
                 print("Failed to read file")
                 print(error)
             }
