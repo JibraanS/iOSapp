@@ -88,4 +88,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRecipe",
+           let destination = segue.destination as? RecipeViewController,
+           let dataIndex = tableView.indexPathForSelectedRow?.row{
+            destination.recipe = displayed_recipes[dataIndex]
+        }
+    }
 }
