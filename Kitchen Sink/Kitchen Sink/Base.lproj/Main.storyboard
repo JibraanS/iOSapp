@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="epc-td-gif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="epc-td-gif">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -563,7 +562,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="KgB-SJ-T8X" style="IBUITableViewCellStyleDefault" id="1jQ-Y0-Plg">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jQ-Y0-Plg" id="mbH-QE-2wE">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -608,11 +607,11 @@
             <objects>
                 <viewController id="fqP-Fk-HIF" customClass="RecipeViewController" customModule="Kitchen_Sink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWX-Ub-6Ml">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="1146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-5A-bMR">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="708"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="982"/>
                                 <subviews>
                                     <view autoresizesSubviews="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Wl-Edc">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="1200"/>
@@ -672,9 +671,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="directions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-Hf-HsI">
-                                                <rect key="frame" x="93" y="376" width="242" height="21"/>
+                                                <rect key="frame" x="64" y="376" width="300" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="242" id="mGk-SD-6ik"/>
+                                                    <constraint firstAttribute="width" constant="300" id="orR-Ax-T5b"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -729,7 +728,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="0c6-67-Mig"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtY-b5-Xq9">
-                                <rect key="frame" x="76" y="747" width="60" height="60"/>
+                                <rect key="frame" x="76" y="1021" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="RpF-mn-cgu"/>
                                     <constraint firstAttribute="height" constant="60" id="jLi-pX-PuV"/>
@@ -737,15 +736,15 @@
                                 <state key="normal" backgroundImage="favorite.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecb-lU-nC2">
-                                <rect key="frame" x="292" y="747" width="60" height="60"/>
+                                <rect key="frame" x="292" y="1021" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Xlj-su-YEk"/>
                                     <constraint firstAttribute="height" constant="60" id="oNy-N9-udJ"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="search.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxP-Ue-l62">
-                                <rect key="frame" x="169" y="728" width="90" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxP-Ue-l62">
+                                <rect key="frame" x="169" y="1003" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="fp4-zO-BdH"/>
                                     <constraint firstAttribute="height" constant="90" id="sqJ-hB-4mk"/>
@@ -771,6 +770,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ehS-LN-HP9"/>
+                    <size key="freeformSize" width="428" height="1200"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="cv4-cs-bjE" id="KtA-Tw-2fn"/>
                         <outlet property="directionsLabel" destination="cBw-Hf-HsI" id="4W1-LI-Oxd"/>

@@ -83,7 +83,7 @@ class RecipeViewController: UIViewController {
             self.favButton.setBackgroundImage(UIImage(named: "favorite-pressed.png"), for: .normal)
         }
         else {
-            self.favButton.setBackgroundImage(UIImage(named: "favorite-pressed.png"), for: .normal)
+            self.favButton.setBackgroundImage(UIImage(named: "favorite.png"), for: .normal)
         }
     }
     
