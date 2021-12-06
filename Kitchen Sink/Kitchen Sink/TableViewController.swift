@@ -110,7 +110,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let row = indexPath.row
         cell.textLabel!.numberOfLines = 5
         cell.textLabel?.text = displayed_recipes[row].value(forKey: "name") as? String
-        //cell.backgroundColor = UIColor.clear
+        // cell.backgroundColor = UIColor.clear
         
         // get current user
         let user = Auth.auth().currentUser
