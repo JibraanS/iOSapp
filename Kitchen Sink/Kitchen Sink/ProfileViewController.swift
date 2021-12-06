@@ -56,11 +56,16 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
                 profileButton.setBackgroundImage(image.circleMasked, for: UIControl.State.normal)
             }
         }
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // get current user
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
         if UserDefaults.standard.string(forKey: email + "name") != nil {
             nameLabel.text = UserDefaults.standard.string(forKey: email + "name")
         }
-        
     }
     
     override func viewDidLoad() {
@@ -117,5 +122,12 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         let email:String = user?.email ?? "none"
         UserDefaults.standard.set(image.pngData(), forKey: email + "image")
         UserDefaults.standard.synchronize()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "favorites"{
+            let nextVC = segue.destination as? TableViewController
+            nextVC?.resultType = segue.identifier ?? ""
+        }
     }
 }

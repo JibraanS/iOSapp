@@ -97,6 +97,9 @@ class SearchViewController: UIViewController {
         return false
     }
     
+    @IBAction func favoritePressed(_ sender: Any) {
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as? TableViewController
         if segue.identifier == "search" {

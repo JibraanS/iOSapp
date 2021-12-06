@@ -314,6 +314,9 @@
                                     <constraint firstAttribute="height" constant="60" id="fo0-nA-Tc6"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="favorite.png"/>
+                                <connections>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="favorites" id="HP8-oh-Ah6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb3-Wc-aoT">
                                 <rect key="frame" x="292" y="724" width="60" height="60"/>
@@ -734,6 +737,9 @@
                                     <constraint firstAttribute="height" constant="60" id="jLi-pX-PuV"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="favorite.png"/>
+                                <connections>
+                                    <segue destination="Zmo-rU-nLc" kind="show" identifier="favorites" id="aju-FO-4lZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecb-lU-nC2">
                                 <rect key="frame" x="292" y="1021" width="60" height="60"/>
@@ -809,8 +815,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1bg-EQ-GYA"/>
-        <segue reference="4KC-6t-7Xh"/>
+        <segue reference="aju-FO-4lZ"/>
+        <segue reference="74A-bu-oay"/>
         <segue reference="nm7-jD-zlo"/>
     </inferredMetricsTieBreakers>
     <resources>

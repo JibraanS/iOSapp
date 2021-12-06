@@ -48,50 +48,62 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
           } catch let error as NSError {
             print("Fetch failed.")
         }
-                
-        for r in coreRecipes {
-            if((r.value(forKeyPath: "type") as! String).contains(resultType)) {
-                var addRecipe: Bool = true
-                if (UserDefaults.standard.bool(forKey: email + "gluten") == true) {
-                    if((r.value(forKeyPath: "tags") as! [String]).contains("Gluten-Free") == false) {
-                        addRecipe = false
-                    }
-                }
-                if (UserDefaults.standard.bool(forKey: email + "vegetarian") == true) {
-                    if((r.value(forKeyPath: "tags") as! [String]).contains("Vegetarian") == false) {
-                        addRecipe = false
-                    }
-                }
-                if (UserDefaults.standard.bool(forKey: email + "kosher") == true) {
-                    if((r.value(forKeyPath: "tags") as! [String]).contains("Kosher") == false) {
-                        addRecipe = false
-                    }
-                }
-                if (addRecipe != false) {
+        
+        if resultType == "favorites"{
+            let user = Auth.auth().currentUser
+            let email:String = user?.email ?? "none"
+            var favorites = UserDefaults.standard.array(forKey: email + "favorites") as! [String]
+            for r in coreRecipes {
+                if (favorites.contains(r.value(forKeyPath: "name") as! String)){
                     displayed_recipes.append(r)
                 }
             }
-            else {
-                for i in (r.value(forKeyPath: "ingredients") as! [String]) {
-                    if i.contains(resultType) {
-                        var addRecipe: Bool = true
-                        if (UserDefaults.standard.bool(forKey: email + "gluten") == true) {
-                            if((r.value(forKeyPath: "tags") as! [String]).contains("Gluten-Free") == false) {
-                                addRecipe = false
-                            }
+        }
+        else{
+            for r in coreRecipes {
+                if((r.value(forKeyPath: "type") as! String).contains(resultType)) {
+                    var addRecipe: Bool = true
+                    if (UserDefaults.standard.bool(forKey: email + "gluten") == true) {
+                        if((r.value(forKeyPath: "tags") as! [String]).contains("Gluten-Free") == false) {
+                            addRecipe = false
                         }
-                        if (UserDefaults.standard.bool(forKey: email + "vegetarian") == true) {
-                            if((r.value(forKeyPath: "tags") as! [String]).contains("Vegetarian") == false) {
-                                addRecipe = false
-                            }
+                    }
+                    if (UserDefaults.standard.bool(forKey: email + "vegetarian") == true) {
+                        if((r.value(forKeyPath: "tags") as! [String]).contains("Vegetarian") == false) {
+                            addRecipe = false
                         }
-                        if (UserDefaults.standard.bool(forKey: email + "kosher") == true) {
-                            if((r.value(forKeyPath: "tags") as! [String]).contains("Kosher") == false) {
-                                addRecipe = false
-                            }
+                    }
+                    if (UserDefaults.standard.bool(forKey: email + "kosher") == true) {
+                        if((r.value(forKeyPath: "tags") as! [String]).contains("Kosher") == false) {
+                            addRecipe = false
                         }
-                        if (addRecipe != false) {
-                            displayed_recipes.append(r)
+                    }
+                    if (addRecipe != false) {
+                        displayed_recipes.append(r)
+                    }
+                }
+                else {
+                    for i in (r.value(forKeyPath: "ingredients") as! [String]) {
+                        if i.contains(resultType) {
+                            var addRecipe: Bool = true
+                            if (UserDefaults.standard.bool(forKey: email + "gluten") == true) {
+                                if((r.value(forKeyPath: "tags") as! [String]).contains("Gluten-Free") == false) {
+                                    addRecipe = false
+                                }
+                            }
+                            if (UserDefaults.standard.bool(forKey: email + "vegetarian") == true) {
+                                if((r.value(forKeyPath: "tags") as! [String]).contains("Vegetarian") == false) {
+                                    addRecipe = false
+                                }
+                            }
+                            if (UserDefaults.standard.bool(forKey: email + "kosher") == true) {
+                                if((r.value(forKeyPath: "tags") as! [String]).contains("Kosher") == false) {
+                                    addRecipe = false
+                                }
+                            }
+                            if (addRecipe != false) {
+                                displayed_recipes.append(r)
+                            }
                         }
                     }
                 }

@@ -146,5 +146,12 @@ class RecipeViewController: UIViewController {
         UserDefaults.standard.set(favorites, forKey: email + "favorites")
         UserDefaults.standard.synchronize()
         print(favorites)
-}
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "favorites" {
+            let nextVC = segue.destination as? TableViewController
+            nextVC?.resultType = segue.identifier ?? ""
+        }
+    }
 }
