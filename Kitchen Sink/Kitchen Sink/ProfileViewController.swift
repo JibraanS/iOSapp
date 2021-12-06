@@ -65,6 +65,13 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        if UserDefaults.standard.array(forKey: email + "favorites") == nil {
+            UserDefaults.standard.set([], forKey: email + "favorites")
+            UserDefaults.standard.synchronize()
+        }
+        
     }
     
     @IBAction func uploadImage(_ sender: Any) {

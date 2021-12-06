@@ -613,8 +613,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-5A-bMR">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="708"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Wl-Edc">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1050"/>
+                                    <view autoresizesSubviews="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Wl-Edc">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH8-oo-j2I">
                                                 <rect key="frame" x="65" y="51.000000000000007" width="276" height="31.333333333333336"/>
@@ -679,6 +679,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-8C-spj">
+                                                <rect key="frame" x="174" y="434" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="5Gg-ex-50M"/>
+                                                    <constraint firstAttribute="width" constant="80" id="CG3-gt-ZFr"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="favorite.png"/>
+                                                <connections>
+                                                    <action selector="favButtonPressed:" destination="fqP-Fk-HIF" eventType="touchUpInside" id="qRg-O3-zvr"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -688,12 +699,14 @@
                                             <constraint firstItem="msn-qj-nJZ" firstAttribute="top" secondItem="ezl-sU-0DV" secondAttribute="bottom" constant="25" id="6hQ-fn-alt"/>
                                             <constraint firstItem="cv4-cs-bjE" firstAttribute="top" secondItem="hY4-1g-z2E" secondAttribute="bottom" constant="34" id="Av7-ds-vxc"/>
                                             <constraint firstItem="Hkt-hY-5ND" firstAttribute="top" secondItem="msn-qj-nJZ" secondAttribute="bottom" constant="41" id="E6i-IY-boS"/>
-                                            <constraint firstAttribute="height" constant="1050" id="EVt-CM-EVA"/>
+                                            <constraint firstAttribute="height" constant="1200" id="EVt-CM-EVA"/>
                                             <constraint firstItem="Hkt-hY-5ND" firstAttribute="centerX" secondItem="sTB-Wl-Edc" secondAttribute="centerX" id="FF5-67-bN0"/>
                                             <constraint firstItem="hY4-1g-z2E" firstAttribute="leading" secondItem="sTB-Wl-Edc" secondAttribute="leading" constant="78" id="Fd1-5t-SCY"/>
+                                            <constraint firstItem="kJy-8C-spj" firstAttribute="centerX" secondItem="sTB-Wl-Edc" secondAttribute="centerX" id="KZU-uG-XNJ"/>
                                             <constraint firstItem="TH8-oo-j2I" firstAttribute="top" secondItem="sTB-Wl-Edc" secondAttribute="top" constant="51" id="PNY-nj-xCU"/>
                                             <constraint firstItem="ezl-sU-0DV" firstAttribute="centerX" secondItem="sTB-Wl-Edc" secondAttribute="centerX" id="S5b-aU-ajf"/>
                                             <constraint firstItem="TSO-8A-8uD" firstAttribute="top" secondItem="TH8-oo-j2I" secondAttribute="bottom" constant="15.666666666666657" id="Sd8-dA-PFn"/>
+                                            <constraint firstItem="kJy-8C-spj" firstAttribute="top" secondItem="cBw-Hf-HsI" secondAttribute="bottom" constant="37" id="bTO-DM-W7x"/>
                                             <constraint firstItem="TSO-8A-8uD" firstAttribute="leading" secondItem="sTB-Wl-Edc" secondAttribute="leading" constant="253" id="duB-gT-E2T"/>
                                             <constraint firstAttribute="trailing" secondItem="cv4-cs-bjE" secondAttribute="trailing" constant="65" id="h7y-yb-d4g"/>
                                             <constraint firstItem="cBw-Hf-HsI" firstAttribute="top" secondItem="Hkt-hY-5ND" secondAttribute="bottom" constant="26" id="loT-Zc-bpA"/>
@@ -761,6 +774,7 @@
                         <outlet property="descriptionLabel" destination="cv4-cs-bjE" id="KtA-Tw-2fn"/>
                         <outlet property="directionsLabel" destination="cBw-Hf-HsI" id="4W1-LI-Oxd"/>
                         <outlet property="directionsTitleLabel" destination="Hkt-hY-5ND" id="9IC-hX-ieY"/>
+                        <outlet property="favButton" destination="kJy-8C-spj" id="LD9-Ex-5L5"/>
                         <outlet property="ingredientsLabel" destination="msn-qj-nJZ" id="388-RQ-eKP"/>
                         <outlet property="ingredientsTitleLabel" destination="ezl-sU-0DV" id="QxI-qn-N3K"/>
                         <outlet property="prepTimeLabel" destination="hY4-1g-z2E" id="3Ja-tD-0WG"/>
