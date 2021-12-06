@@ -611,11 +611,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-5A-bMR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-5A-bMR">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="708"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Wl-Edc">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1050"/>
+                                    <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Wl-Edc">
+                                        <rect key="frame" x="0.0" y="343.25477707016103" width="427.99999999999955" height="708"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH8-oo-j2I">
                                                 <rect key="frame" x="65" y="51.000000000000007" width="276" height="31.333333333333336"/>
@@ -759,6 +759,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ehS-LN-HP9"/>
                     <connections>
+                        <outlet property="contentView" destination="sTB-Wl-Edc" id="yaK-ix-uu0"/>
                         <outlet property="descriptionLabel" destination="cv4-cs-bjE" id="KtA-Tw-2fn"/>
                         <outlet property="directionsLabel" destination="cBw-Hf-HsI" id="4W1-LI-Oxd"/>
                         <outlet property="directionsTitleLabel" destination="Hkt-hY-5ND" id="9IC-hX-ieY"/>
@@ -766,7 +767,7 @@
                         <outlet property="ingredientsTitleLabel" destination="ezl-sU-0DV" id="QxI-qn-N3K"/>
                         <outlet property="prepTimeLabel" destination="hY4-1g-z2E" id="3Ja-tD-0WG"/>
                         <outlet property="recipeLabel" destination="TH8-oo-j2I" id="1Yi-8w-cAQ"/>
-                        <outlet property="scrollView" destination="sTB-Wl-Edc" id="yyb-PP-gco"/>
+                        <outlet property="scrollView" destination="XaC-5A-bMR" id="17b-fp-fUi"/>
                         <outlet property="timeLabel" destination="TSO-8A-8uD" id="aa0-Lz-iRR"/>
                         <outlet property="view" destination="sTB-Wl-Edc" id="3wz-Fq-ygF"/>
                     </connections>

@@ -22,10 +22,10 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var directionsTitleLabel: UILabel!
     @IBOutlet weak var directionsLabel: UILabel!
     
-    var recipe:NSManagedObject?
+    var recipe: NSManagedObject?
     
     override func viewWillAppear(_ animated: Bool) {
-        
+
         recipeLabel.text = recipe?.value(forKeyPath: "name") as! String
         timeLabel.text = recipe?.value(forKeyPath: "time") as! String
         descriptionLabel.text = recipe?.value(forKeyPath: "desc") as! String
