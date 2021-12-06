@@ -21,7 +21,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         // get current user
         let user = Auth.auth().currentUser
-        let email:String = user?.email ?? "none"
+        let email: String = user?.email ?? "none"
         
         super.viewWillAppear(animated)
         // set background based on darkmode
@@ -37,6 +37,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = Auth.auth().currentUser
+        let email: String = user?.email ?? "none"
         // core data setup
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -49,12 +51,48 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
         for r in coreRecipes {
             if((r.value(forKeyPath: "type") as! String).contains(resultType)) {
-                displayed_recipes.append(r)
+                var addRecipe: Bool = true
+                if (UserDefaults.standard.bool(forKey: email + "gluten") == true) {
+                    if((r.value(forKeyPath: "tags") as! [String]).contains("Gluten-Free") == false) {
+                        addRecipe = false
+                    }
+                }
+                if (UserDefaults.standard.bool(forKey: email + "vegetarian") == true) {
+                    if((r.value(forKeyPath: "tags") as! [String]).contains("Vegetarian") == false) {
+                        addRecipe = false
+                    }
+                }
+                if (UserDefaults.standard.bool(forKey: email + "kosher") == true) {
+                    if((r.value(forKeyPath: "tags") as! [String]).contains("Kosher") == false) {
+                        addRecipe = false
+                    }
+                }
+                if (addRecipe != false) {
+                    displayed_recipes.append(r)
+                }
             }
             else {
                 for i in (r.value(forKeyPath: "ingredients") as! [String]) {
                     if i.contains(resultType) {
-                        displayed_recipes.append(r)
+                        var addRecipe: Bool = true
+                        if (UserDefaults.standard.bool(forKey: email + "gluten") == true) {
+                            if((r.value(forKeyPath: "tags") as! [String]).contains("Gluten-Free") == false) {
+                                addRecipe = false
+                            }
+                        }
+                        if (UserDefaults.standard.bool(forKey: email + "vegetarian") == true) {
+                            if((r.value(forKeyPath: "tags") as! [String]).contains("Vegetarian") == false) {
+                                addRecipe = false
+                            }
+                        }
+                        if (UserDefaults.standard.bool(forKey: email + "kosher") == true) {
+                            if((r.value(forKeyPath: "tags") as! [String]).contains("Kosher") == false) {
+                                addRecipe = false
+                            }
+                        }
+                        if (addRecipe != false) {
+                            displayed_recipes.append(r)
+                        }
                     }
                 }
             }
