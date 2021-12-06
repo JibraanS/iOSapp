@@ -22,10 +22,12 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var directionsTitleLabel: UILabel!
     @IBOutlet weak var directionsLabel: UILabel!
     
-    var recipe: NSManagedObject?
+    @IBOutlet weak var favButton: UIButton!
+    
+    var recipe:NSManagedObject?
     
     override func viewWillAppear(_ animated: Bool) {
-
+        
         recipeLabel.text = recipe?.value(forKeyPath: "name") as! String
         timeLabel.text = recipe?.value(forKeyPath: "time") as! String
         descriptionLabel.text = recipe?.value(forKeyPath: "desc") as! String
@@ -76,10 +78,73 @@ class RecipeViewController: UIViewController {
             directionsTitleLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
             directionsLabel.textColor = #colorLiteral(red: 0.1960784314, green: 0.1960784314, blue: 0.1960784314, alpha: 1)
         }
+        var favorites = UserDefaults.standard.array(forKey: email + "favorites") as! [String]
+        if favorites.contains(recipeLabel.text ?? "none"){
+            self.favButton.setBackgroundImage(UIImage(named: "favorite-pressed.png"), for: .normal)
+        }
+        else {
+            self.favButton.setBackgroundImage(UIImage(named: "favorite-pressed.png"), for: .normal)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func favButtonPressed(_ sender: Any) {
+        // get current user
+        let user = Auth.auth().currentUser
+        let email:String = user?.email ?? "none"
+        var favorites = UserDefaults.standard.array(forKey: email + "favorites") as! [String]
+        
+        if favorites.contains(recipeLabel.text ?? "none"){
+            favorites.remove(at: favorites.firstIndex(of: recipeLabel.text ?? "none") ?? 0)
+            UIView.animate(
+                withDuration: 0.25,
+                delay: 0.0,
+                options: .curveEaseOut,
+                animations: {
+                    self.favButton.alpha = 0.0
+                },
+                completion: {_ in
+                    self.favButton.setBackgroundImage(UIImage(named: "favorite.png"), for: .normal)
+                    UIView.animate(
+                        withDuration: 0.25,
+                        delay: 0.0,
+                        options: .curveEaseIn,
+                        animations: {
+                            self.favButton.alpha = 1.0
+                        },
+                        completion: nil
+                    )
+                }
+            )
+        }
+        else {
+            favorites.append(recipeLabel.text ?? "none")
+            UIView.animate(
+                withDuration: 0.25,
+                delay: 0.0,
+                options: .curveEaseOut,
+                animations: {
+                    self.favButton.alpha = 0.0
+                },
+                completion: {_ in
+                    self.favButton.setBackgroundImage(UIImage(named: "favorite-pressed.png"), for: .normal)
+                    UIView.animate(
+                        withDuration: 0.25,
+                        delay: 0.0,
+                        options: .curveEaseIn,
+                        animations: {
+                            self.favButton.alpha = 1.0
+                        },
+                        completion: nil
+                    )
+                }
+            )
+        }
+        UserDefaults.standard.set(favorites, forKey: email + "favorites")
+        UserDefaults.standard.synchronize()
+        print(favorites)
+}
 }
